@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TradFi8 — гроші простими словами</title>
+<meta name="description" content="TradFi8: фінансова грамотність, традиційні фінанси й криптовалюта простою українською. Статті, відео, калькулятори, курси.">
+<style>
+  :root{
+    --ink:#1d1d1f; --muted:#6e6e73; --soft:#86868b;
+    --bg:#ffffff; --gray:#f5f5f7; --black:#000; --line:#d2d2d7;
+    --blue:#0066cc; --blue-d:#2997ff; --green:#30d158;
+    --radius:28px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Roboto,Arial,sans-serif;
+       color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.47;letter-spacing:-.01em}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1024px;margin:0 auto;padding:0 22px}
+  .center{text-align:center}
+
+  /* ---------- Навігація ---------- */
+  .nav{position:sticky;top:0;z-index:50;height:48px;background:rgba(251,251,253,.8);
+       backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+       border-bottom:1px solid rgba(0,0,0,.08)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:48px}
+  .logo{font-weight:700;font-size:19px;color:var(--ink);letter-spacing:-.02em}
+  .logo b{background:linear-gradient(135deg,#30d158,#0a84ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .logo:hover{text-decoration:none}
+  .menu{display:flex;gap:34px}
+  .menu a{color:var(--ink);font-size:12.5px;opacity:.8}
+  .menu a:hover{opacity:1;text-decoration:none}
+  .nav-cta{font-size:12.5px;background:var(--blue);color:#fff;padding:5px 13px;border-radius:980px}
+  .nav-cta:hover{text-decoration:none;background:#0077ed}
+  .burger{display:none;background:none;border:0;font-size:20px;cursor:pointer;color:var(--ink)}
+  @media(max-width:833px){
+    .menu{display:none;position:absolute;top:48px;left:0;right:0;flex-direction:column;gap:0;
+          background:rgba(251,251,253,.97);padding:8px 22px 18px;border-bottom:1px solid var(--line)}
+    .menu.open{display:flex}
+    .menu a{font-size:17px;padding:10px 0;border-bottom:1px solid #e8e8ed;opacity:1}
+    .burger{display:block}
+    .nav-cta{display:none}
+  }
+
+  /* ---------- Загальні блоки ---------- */
+  section{padding:110px 0}
+  .eyebrow{font-size:21px;font-weight:600;color:var(--muted);margin-bottom:6px}
+  .headline{font-size:clamp(40px,7vw,80px);font-weight:700;line-height:1.05;letter-spacing:-.035em}
+  .h2{font-size:clamp(32px,5vw,56px);font-weight:700;line-height:1.07;letter-spacing:-.03em}
+  .lead{font-size:clamp(19px,2.2vw,24px);color:var(--muted);max-width:720px;margin:18px auto 0;line-height:1.38}
+  .links{display:flex;gap:34px;justify-content:center;flex-wrap:wrap;margin-top:26px;font-size:clamp(17px,1.8vw,21px)}
+  .links a:after,.more:after{content:" ›";}
+  .btn{display:inline-block;background:var(--blue);color:#fff;font-size:17px;padding:12px 24px;border-radius:980px;border:0;cursor:pointer;font-family:inherit}
+  .btn:hover{background:#0077ed;text-decoration:none}
+  .btn.light{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+  .btn.light:hover{background:var(--blue);color:#fff}
+  .gray{background:var(--gray)}
+  .dark{background:var(--black);color:#f5f5f7}
+  .dark .lead,.dark .eyebrow{color:#a1a1a6}
+  .dark a{color:var(--blue-d)}
+
+  /* поява під час прокрутки */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- Головний екран ---------- */
+  .hero{padding:90px 0 0;text-align:center;overflow:hidden}
+  .hero .headline em{font-style:normal;background:linear-gradient(90deg,#30d158 0%,#0a84ff 60%,#5e5ce6 100%);
+       -webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-visual{margin:64px auto 0;max-width:880px;position:relative}
+  .hero-visual svg{width:100%;height:auto;display:block}
+  .stats{display:flex;justify-content:center;gap:clamp(30px,8vw,100px);padding:60px 0 100px;flex-wrap:wrap}
+  .stat b{display:block;font-size:clamp(34px,5vw,52px);font-weight:700;letter-spacing:-.03em;line-height:1.1}
+  .stat span{color:var(--muted);font-size:15px}
+
+  /* ---------- Калькулятор ---------- */
+  .calc{max-width:880px;margin:60px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .field{background:#1c1c1e;border-radius:18px;padding:20px 22px}
+  .field label{display:block;font-size:13px;color:#a1a1a6;margin-bottom:8px}
+  .field input{width:100%;background:transparent;border:0;color:#f5f5f7;font-size:30px;font-weight:600;font-family:inherit;outline:none;letter-spacing:-.02em}
+  .field input::-webkit-inner-spin-button{opacity:.3}
+  .field input[type=range]{margin-top:12px;accent-color:var(--green);font-size:14px;height:4px}
+  .result{text-align:center;margin-top:60px}
+  .result .big{font-size:clamp(48px,9vw,104px);font-weight:700;letter-spacing:-.04em;line-height:1;
+       background:linear-gradient(90deg,#30d158,#64d2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .result .split{display:flex;justify-content:center;gap:50px;margin-top:22px;color:#a1a1a6;font-size:17px;flex-wrap:wrap}
+  .result .split b{display:block;color:#f5f5f7;font-size:26px;font-weight:600}
+  .note{font-size:12px;color:var(--soft);margin-top:30px;text-align:center}
+  @media(max-width:700px){.calc{grid-template-columns:1fr}}
+
+  /* ---------- Плитки статей ---------- */
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px}
+  .tile{border-radius:var(--radius);min-height:520px;padding:56px 40px 0;text-align:center;position:relative;overflow:hidden;
+        display:flex;flex-direction:column;align-items:center;transition:transform .4s ease}
+  .tile:hover{transform:scale(1.008)}
+  .tile .tag{font-size:14px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;opacity:.75}
+  .tile h3{font-size:clamp(28px,3.4vw,40px);font-weight:700;line-height:1.1;letter-spacing:-.03em;margin:8px 0 10px;max-width:440px}
+  .tile p{font-size:17px;max-width:400px;opacity:.8}
+  .tile .more{margin-top:16px;font-size:17px}
+  .tile .art{margin-top:auto;width:100%;max-width:360px;padding-top:30px}
+  .tile .art svg{width:100%;height:auto;display:block}
+  .t-white{background:#fff}
+  .t-gray{background:var(--gray)}
+  .t-black{background:#000;color:#f5f5f7}
+  .t-black a{color:var(--blue-d)}
+  .t-green{background:linear-gradient(160deg,#e9fbef,#d5f5e0)}
+  .t-blue{background:linear-gradient(160deg,#e8f2ff,#d6e8ff)}
+  .t-night{background:linear-gradient(160deg,#0b1a33,#1a1040);color:#f5f5f7}
+  .t-night a{color:var(--blue-d)}
+  @media(max-width:760px){.tiles{grid-template-columns:1fr}.tile{min-height:460px;padding:44px 24px 0}}
+
+  /* ---------- Порівняння продуктів ---------- */
+  .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:70px}
+  .plan{text-align:center;padding:0 10px}
+  .plan .ico{width:84px;height:84px;margin:0 auto 22px;border-radius:22px;display:grid;place-items:center;font-size:40px}
+  .plan .badge{display:inline-block;font-size:12px;font-weight:600;color:#b64400;margin-bottom:6px;height:18px}
+  .plan h3{font-size:28px;font-weight:700;letter-spacing:-.02em}
+  .plan .desc{color:var(--muted);font-size:17px;margin:6px 0 16px;min-height:52px}
+  .plan .price{font-size:19px;font-weight:600;margin-bottom:20px}
+  .plan ul{list-style:none;border-top:1px solid var(--line);margin-top:28px;padding-top:22px;font-size:15px;color:var(--ink)}
+  .plan ul li{padding:10px 0;border-bottom:1px solid #e8e8ed}
+  .plan .acts{display:flex;flex-direction:column;align-items:center;gap:12px}
+  @media(max-width:833px){.compare{grid-template-columns:1fr;gap:70px}}
+
+  /* ---------- Відео ---------- */
+  .video-card{margin:60px auto 0;max-width:880px;border-radius:var(--radius);overflow:hidden;position:relative;aspect-ratio:16/9;
+       background:radial-gradient(ellipse at 30% 20%,#1e3a5f 0%,#0a0a0a 60%);display:grid;place-items:center}
+  .play{width:96px;height:96px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(10px);display:grid;place-items:center;transition:transform .3s}
+  .video-card:hover .play{transform:scale(1.08)}
+  .play:before{content:"";border-left:30px solid #fff;border-top:18px solid transparent;border-bottom:18px solid transparent;margin-left:8px}
+  .video-card .cap{position:absolute;left:32px;bottom:28px;color:#fff;font-size:21px;font-weight:600;text-align:left}
+  .video-card .cap small{display:block;font-weight:400;font-size:15px;color:#a1a1a6}
+
+  /* ---------- Підписка ---------- */
+  .sub-form{display:flex;max-width:520px;margin:40px auto 0;background:#fff;border:1px solid var(--line);border-radius:980px;padding:6px;gap:6px}
+  .sub-form input{flex:1;border:0;outline:none;font-size:17px;padding:0 18px;font-family:inherit;background:transparent;min-width:0}
+  .socials{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-top:40px;font-size:17px}
+
+  /* ---------- Підвал ---------- */
+  footer{background:var(--gray);color:var(--muted);font-size:12px;padding:20px 0 40px}
+  footer .disc{padding:14px 0 18px;border-bottom:1px solid var(--line);line-height:1.6}
+  .fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .fcols h4{color:var(--ink);font-size:12px;font-weight:600;margin-bottom:10px}
+  .fcols a{display:block;color:var(--muted);padding:3px 0}
+  .fcols a:hover{color:var(--ink)}
+  .fbottom{padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  @media(max-width:700px){.fcols{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<!-- Навігація -->
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="#top">Trad<b>Fi</b>8</a>
+  <div class="menu" id="menu">
+    <a href="#articles">Статті</a>
+    <a href="#calc">Калькулятор</a>
+    <a href="#products">Курси й гайди</a>
+    <a href="#business">Для бізнесу</a>
+    <a href="#video">Відео</a>
+    <a href="#subscribe">Підписка</a>
+  </div>
+  <a class="nav-cta" href="#subscribe">Підписатися</a>
+  <button class="burger" aria-label="Меню" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></nav>
+
+<!-- Головний екран -->
+<header class="hero" id="top"><div class="wrap">
+  <p class="eyebrow reveal">TradFi8</p>
+  <h1 class="headline reveal">Гроші.<br><em>Простими словами.</em></h1>
+  <p class="lead reveal">Фінансова грамотність, традиційні фінанси й криптовалюта українською. Без складних термінів. Нова стаття щодня.</p>
+  <div class="links reveal">
+    <a href="#articles">Читати статті</a>
+    <a href="https://youtube.com/@TradFi8">Дивитися на YouTube</a>
+  </div>
+
+  <div class="hero-visual reveal">
+    <!-- Ілюстрація: крива зростання накопичень -->
+    <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Графік зростання накопичень">
+      <defs>
+        <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#30d158"/><stop offset=".6" stop-color="#0a84ff"/><stop offset="1" stop-color="#5e5ce6"/></linearGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a84ff" stop-opacity=".22"/><stop offset="1" stop-color="#0a84ff" stop-opacity="0"/></linearGradient>
+      </defs>
+      <rect x="0" y="0" width="880" height="380" rx="28" fill="#f5f5f7"/>
+      <g stroke="#e3e3e8" stroke-width="1">
+        <line x1="60" y1="300" x2="820" y2="300"/><line x1="60" y1="220" x2="820" y2="220"/>
+        <line x1="60" y1="140" x2="820" y2="140"/><line x1="60" y1="60" x2="820" y2="60"/>
+      </g>
+      <path d="M60 300 C 260 296, 420 280, 560 230 S 760 90, 820 50 L820 300 Z" fill="url(#g2)"/>
+      <path id="curve" d="M60 300 C 260 296, 420 280, 560 230 S 760 90, 820 50" fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M60 300 L 820 240" fill="none" stroke="#c7c7cc" stroke-width="3" stroke-dasharray="8 10"/>
+      <circle cx="820" cy="50" r="10" fill="#5e5ce6"/><circle cx="820" cy="50" r="22" fill="#5e5ce6" opacity=".15"/>
+      <text x="800" y="96" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="22" font-weight="700" fill="#1d1d1f">зі складним відсотком</text>
+      <text x="800" y="270" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="17" fill="#86868b">просто відкладати</text>
+      <text x="60" y="340" font-family="-apple-system,Helvetica,Arial" font-size="15" fill="#86868b">сьогодні</text>
+      <text x="820" y="340" text-anchor="end" font-family="-apple-system,Helvetica,Arial" font-size="15" fill="#86868b">через 30 років</text>
+    </svg>
+  </div>
+
+  <div class="stats">
+    <div class="stat reveal"><b>97+</b><span>відео на YouTube</span></div>
+    <div class="stat reveal"><b>щодня</b><span>нові статті</span></div>
+    <div class="stat reveal"><b>6</b><span>соцмереж</span></div>
+  </div>
+</div></header>
+
+<!-- Статті -->
+<section id="articles" class="gray" style="padding:100px 0 0">
+  <div class="wrap center">
+    <h2 class="h2 reveal">Свіжі статті.</h2>
+    <p class="lead reveal">Пише AI-редакція TradFi8. Руслан перевіряє кожну статтю перед публікацією.</p>
+  </div>
+  <div class="tiles" style="margin-top:60px">
+    <article class="tile t-white reveal">
+      <span class="tag">Депозити</span>
+      <h3>Банк збанкрутував. А ваш депозит?</h3>
+      <p>Як працює Фонд гарантування вкладів і як перевірити свій банк.</p>
+      <a class="more" href="#">Читати</a>
+      <div class="art"><svg viewBox="0 0 360 200"><rect x="70" y="40" width="220" height="150" rx="16" fill="#f5f5f7"/><path d="M180 60 l70 28 v8 h-140 v-8z" fill="#1d1d1f"/><g fill="#1d1d1f"><rect x="125" y="104" width="16" height="56" rx="3"/><rect x="172" y="104" width="16" height="56" rx="3"/><rect x="219" y="104" width="16" height="56" rx="3"/></g><rect x="105" y="166" width="150" height="10" rx="4" fill="#1d1d1f"/><circle cx="282" cy="56" r="30" fill="#30d158"/><path d="M268 56 l10 10 l18 -20" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </article>
+    <article class="tile t-black reveal">
+      <span class="tag">Інвестиції</span>
+      <h3>Відсотки на відсотки.</h3>
+      <p>Як 10 000 ₴ під 10% річних за 30 років стають 174 494 ₴.</p>
+      <a class="more" href="#calc">Порахувати</a>
+      <div class="art"><svg viewBox="0 0 360 200"><g fill="url(#gb)"><rect x="40" y="170" width="28" height="20" rx="6"/><rect x="82" y="160" width="28" height="30" rx="6"/><rect x="124" y="145" width="28" height="45" rx="6"/><rect x="166" y="122" width="28" height="68" rx="6"/><rect x="208" y="92" width="28" height="98" rx="6"/><rect x="250" y="56" width="28" height="134" rx="6"/><rect x="292" y="14" width="28" height="176" rx="6"/></g><defs><linearGradient id="gb" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#30d158"/><stop offset="1" stop-color="#64d2ff"/></linearGradient></defs></svg></div>
+    </article>
+    <article class="tile t-night reveal">
+      <span class="tag">Крипто</span>
+      <h3>Seed-фраза. 12 слів, важливіших за пароль.</h3>
+      <p>Де її зберігати і 5 помилок, через які втрачають криптовалюту.</p>
+      <a class="more" href="#">Читати</a>
+      <div class="art"><svg viewBox="0 0 360 200" font-family="-apple-system,Helvetica,Arial" font-size="13"><g fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.18)"><rect x="20" y="30" width="100" height="34" rx="10"/><rect x="130" y="30" width="100" height="34" rx="10"/><rect x="240" y="30" width="100" height="34" rx="10"/><rect x="20" y="74" width="100" height="34" rx="10"/><rect x="130" y="74" width="100" height="34" rx="10"/><rect x="240" y="74" width="100" height="34" rx="10"/><rect x="20" y="118" width="100" height="34" rx="10"/><rect x="130" y="118" width="100" height="34" rx="10"/><rect x="240" y="118" width="100" height="34" rx="10"/></g><g fill="#a1a1a6"><text x="34" y="52">1 · ••••</text><text x="144" y="52">2 · ••••</text><text x="254" y="52">3 · ••••</text><text x="34" y="96">4 · ••••</text><text x="144" y="96">5 · ••••</text><text x="254" y="96">6 · ••••</text><text x="34" y="140">7 · ••••</text><text x="144" y="140">8 · ••••</text><text x="254" y="140">9 · ••••</text></g><rect x="150" y="164" width="60" height="30" rx="8" fill="#5e5ce6"/><path d="M165 164 v-8 a15 15 0 0 1 30 0 v8" stroke="#5e5ce6" stroke-width="5" fill="none"/></svg></div>
+    </article>
+    <article class="tile t-blue reveal">
+      <span class="tag">Облігації</span>
+      <h3>ОВДП. Чи варто купувати?</h3>
+      <p>Дохідність, податки, ризики й де купити державні облігації в Україні.</p>
+      <a class="more" href="#">Читати</a>
+      <div class="art"><svg viewBox="0 0 360 200"><rect x="60" y="30" width="240" height="160" rx="18" fill="#fff"/><rect x="84" y="56" width="120" height="12" rx="6" fill="#0a84ff"/><rect x="84" y="80" width="190" height="8" rx="4" fill="#d6e8ff"/><rect x="84" y="98" width="160" height="8" rx="4" fill="#d6e8ff"/><rect x="84" y="116" width="175" height="8" rx="4" fill="#d6e8ff"/><circle cx="250" cy="156" r="22" fill="none" stroke="#0a84ff" stroke-width="4"/><text x="250" y="162" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="700" font-size="17" fill="#0a84ff">₴</text></svg></div>
+    </article>
+    <article class="tile t-green reveal">
+      <span class="tag">Бюджет</span>
+      <h3>Одна монета з десяти — собі.</h3>
+      <p>Проста система, щоб почати відкладати навіть із невеликої зарплати.</p>
+      <a class="more" href="#">Читати</a>
+      <div class="art"><svg viewBox="0 0 360 200"><g fill="#c9eed6"><circle cx="60" cy="150" r="22"/><circle cx="110" cy="150" r="22"/><circle cx="160" cy="150" r="22"/><circle cx="210" cy="150" r="22"/><circle cx="260" cy="150" r="22"/><circle cx="60" cy="96" r="22"/><circle cx="110" cy="96" r="22"/><circle cx="160" cy="96" r="22"/><circle cx="210" cy="96" r="22"/></g><circle cx="300" cy="70" r="34" fill="#30d158"/><text x="300" y="79" text-anchor="middle" font-family="-apple-system,Helvetica,Arial" font-weight="700" font-size="24" fill="#fff">10%</text></svg></div>
+    </article>
+    <article class="tile t-gray reveal" style="background:#fff">
+      <span class="tag">Економіка</span>
+      <h3>Облікова ставка за 2 хвилини.</h3>
+      <p>Як рішення НБУ впливають на ваш кредит і депозит.</p>
+      <a class="more" href="#">Читати</a>
+      <div class="art"><svg viewBox="0 0 360 200"><path d="M40 180 A140 140 0 0 1 320 180" fill="none" stroke="#f5f5f7" stroke-width="26" stroke-linecap="round"/><path d="M40 180 A140 140 0 0 1 250 60" fill="none" stroke="url(#gr)" stroke-width="26" stroke-linecap="round"/><defs><linearGradient id="gr"><stop offset="0" stop-color="#30d158"/><stop offset="1" stop-color="#ff9f0a"/></linearGradient></defs><line x1="180" y1="180" x2="245" y2="95" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round"/><circle cx="180" cy="180" r="12" fill="#1d1d1f"/></svg></div>
+    </article>
+  </div>
+  <div class="center" style="padding:50px 0 100px"><a class="btn light" href="#">Усі статті</a></div>
+</section>
+
+<!-- Калькулятор -->
+<section id="calc" class="dark">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Калькулятор складного відсотка</p>
+    <h2 class="h2 reveal">Скільки накопичите?</h2>
+    <p class="lead reveal">Змініть суму, ставку чи строк і подивіться, як працює відсоток на відсоток.</p>
+  </div>
+  <div class="wrap">
+    <div class="calc reveal">
+      <div class="field"><label for="m">Щомісяця, ₴</label><input id="m" type="number" value="2000" min="0" step="100"><input id="mr" type="range" min="0" max="50000" step="500" value="2000" aria-label="Щомісяця"></div>
+      <div class="field"><label for="r">Річна ставка, %</label><input id="r" type="number" value="12" min="0" max="50" step="0.5"><input id="rr" type="range" min="0" max="30" step="0.5" value="12" aria-label="Ставка"></div>
+      <div class="field"><label for="y">Років</label><input id="y" type="number" value="10" min="1" max="50"><input id="yr" type="range" min="1" max="40" step="1" value="10" aria-label="Роки"></div>
+    </div>
+    <div class="result reveal">
+      <div class="big" id="fv">0 ₴</div>
+      <div class="split">
+        <div><b id="put">0 ₴</b>ви внесете</div>
+        <div><b id="gain">0 ₴</b>дохід від відсотків</div>
+      </div>
+    </div>
+    <p class="note">Розрахунок приблизний: щомісячне поповнення, нарахування щомісяця, без податків та інфляції. Не є інвестиційною порадою.</p>
+  </div>
+</section>
+
+<!-- Продукти -->
+<section id="products">
+  <div class="wrap center">
+    <h2 class="h2 reveal">Оберіть свій шлях.</h2>
+    <p class="lead reveal">Від першого бюджету до AI-помічника для бізнесу.</p>
+    <div class="compare">
+      <div class="plan reveal">
+        <div class="ico" style="background:#e9fbef">📒</div>
+        <span class="badge"></span>
+        <h3>Особистий бюджет</h3>
+        <p class="desc">Гайд PDF: порядок у грошах за 7 днів.</p>
+        <p class="price">299 ₴</p>
+        <div class="acts"><a class="btn" href="#">Купити</a><a class="more" href="#">Дізнатися більше</a></div>
+        <ul><li>Google-таблиця обліку витрат</li><li>Покроковий план на 7 днів</li><li>Шаблон фінансової подушки</li></ul>
+      </div>
+      <div class="plan reveal">
+        <div class="ico" style="background:#e8f2ff">🎓</div>
+        <span class="badge">Новинка</span>
+        <h3>Гроші з нуля</h3>
+        <p class="desc">Курс: 10 коротких уроків про гроші.</p>
+        <p class="price">990 ₴</p>
+        <div class="acts"><a class="btn" href="#">Записатися</a><a class="more" href="#">Дізнатися більше</a></div>
+        <ul><li>Депозити, ОВДП, ETF, крипто</li><li>Домашні завдання з розборами</li><li>Закритий Telegram-чат</li></ul>
+      </div>
+      <div class="plan reveal" id="business">
+        <div class="ico" style="background:#f1efff">🤖</div>
+        <span class="badge">Для бізнесу</span>
+        <h3>AI-помічник</h3>
+        <p class="desc">Агент під ключ, який бере на себе рутину.</p>
+        <p class="price">від $300 + супровід</p>
+        <div class="acts"><a class="btn" href="#">Залишити заявку</a><a class="more" href="#">Як це працює</a></div>
+        <ul><li>Пошта, документи, задачі</li><li>Автопостинг у соцмережі</li><li>Щоденні звіти в Telegram</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Відео -->
+<section id="video" class="gray">
+  <div class="wrap center">
+    <p class="eyebrow reveal">YouTube</p>
+    <h2 class="h2 reveal">Більше 97 відео.<br>Дивіться, коли зручно.</h2>
+    <div class="links reveal"><a href="https://youtube.com/@TradFi8">Перейти на канал</a></div>
+    <a class="video-card reveal" href="https://youtube.com/@TradFi8" aria-label="Відкрити канал TradFi8 на YouTube">
+      <div class="play"></div>
+      <div class="cap">TradFi8 на YouTube<small>Фінанси, інвестиції, крипто — простими словами</small></div>
+    </a>
+  </div>
+</section>
+
+<!-- Підписка -->
+<section id="subscribe">
+  <div class="wrap center">
+    <h2 class="h2 reveal">Одна порада.<br>Щотижня.</h2>
+    <p class="lead reveal">Без спаму. Тільки найважливіше про ваші гроші.</p>
+    <form class="sub-form reveal" onsubmit="event.preventDefault();this.outerHTML='<p class=&quot;lead&quot; style=&quot;color:#1d1d1f&quot;>Дякуємо! Перевірте пошту ✉️</p>'">
+      <input type="email" placeholder="Ваш e-mail" required aria-label="E-mail">
+      <button class="btn">Підписатися</button>
+    </form>
+    <div class="socials reveal">
+      <a href="https://youtube.com/@TradFi8">YouTube</a>
+      <a href="https://t.me/tradfi8">Telegram</a>
+      <a href="https://instagram.com/tradfi8">Instagram</a>
+      <a href="https://tiktok.com/@tradfi8_">TikTok</a>
+      <a href="https://x.com/TradFi8">X</a>
+    </div>
+  </div>
+</section>
+
+<!-- Підвал -->
+<footer><div class="wrap">
+  <p class="disc">Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою. Інвестиції пов'язані з ризиком, зокрема з втратою коштів. Ухвалюйте рішення самостійно або з ліцензованим консультантом.</p>
+  <div class="fcols">
+    <div><h4>Навчання</h4><a href="#articles">Статті</a><a href="#calc">Калькулятор</a><a href="#products">Курс «Гроші з нуля»</a><a href="#products">Гайд «Бюджет»</a></div>
+    <div><h4>Теми</h4><a href="#">Депозити</a><a href="#">ОВДП</a><a href="#">Крипто</a><a href="#">Бюджет</a></div>
+    <div><h4>Для бізнесу</h4><a href="#business">AI-помічник</a><a href="#business">Залишити заявку</a></div>
+    <div><h4>TradFi8</h4><a href="https://youtube.com/@TradFi8">YouTube</a><a href="https://t.me/tradfi8">Telegram</a><a href="https://instagram.com/tradfi8">Instagram</a><a href="https://tiktok.com/@tradfi8_">TikTok</a></div>
+  </div>
+  <div class="fbottom"><span>© 2026 TradFi8. Традиційні фінанси простими словами.</span><span>Україна · Українська</span></div>
+</div></footer>
+
+<script>
+  // Поява блоків під час прокрутки
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Закривати мобільне меню після вибору пункту
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+
+  // Калькулятор складного відсотка
+  const f = x => Math.round(x).toLocaleString('uk-UA') + ' ₴';
+  function pair(num, rng){
+    const a = document.getElementById(num), b = document.getElementById(rng);
+    a.addEventListener('input', () => { b.value = a.value; calc(); });
+    b.addEventListener('input', () => { a.value = b.value; calc(); });
+  }
+  function calc(){
+    const m = +document.getElementById('m').value || 0;
+    const r = (+document.getElementById('r').value || 0) / 100 / 12;
+    const n = (+document.getElementById('y').value || 0) * 12;
+    const fv = r ? m * ((Math.pow(1 + r, n) - 1) / r) : m * n, put = m * n;
+    document.getElementById('fv').textContent = f(fv);
+    document.getElementById('put').textContent = f(put);
+    document.getElementById('gain').textContent = f(fv - put);
+  }
+  pair('m','mr'); pair('r','rr'); pair('y','yr'); calc();
+</script>
+</body>
+</html>
