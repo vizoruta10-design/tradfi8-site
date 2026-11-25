@@ -235,6 +235,214 @@ ARTICLES = [
 """,
         "disc": True,
     },
+    {
+        "slug": "depozyt-chy-ovdp",
+        "tag": "Заощадження",
+        "title": "Депозит чи ОВДП: що обрати для заощаджень",
+        "desc": "Порівнюємо два найпопулярніші способи зберегти гроші: хто гарантує, як забрати достроково і які ризики.",
+        "date": "2026-11-25", "minutes": 5,
+        "body": """
+<p>Депозит у банку й облігації внутрішньої державної позики (ОВДП) — два найпоширеніші способи для українців зберегти гроші й отримати дохід. Вони схожі, але мають важливі відмінності.</p>
+
+<h2>Порівняння</h2>
+<table>
+<tr><th></th><th>Депозит</th><th>ОВДП</th></tr>
+<tr><td>Кому ви позичаєте</td><td>банку</td><td>державі</td></tr>
+<tr><td>Хто гарантує повернення</td><td>Фонд гарантування вкладів — у межах гарантованої суми</td><td>держава як позичальник</td></tr>
+<tr><td>Дострокове повернення</td><td>залежить від договору; часто зі втратою частини відсотків</td><td>можна продати, але за ринковою ціною</td></tr>
+<tr><td>Де оформити</td><td>у банку чи його застосунку</td><td>через банк, брокера або «Дію»</td></tr>
+<tr><td>Валюта</td><td>гривня, долар, євро</td><td>гривня, долар, євро</td></tr>
+</table>
+
+<h2>Коли зручніший депозит</h2>
+<ul>
+<li>Потрібна простота: відкрили в застосунку за кілька хвилин.</li>
+<li>Сума в межах гарантованої Фондом.</li>
+<li>Вам підходить строк і ставка конкретного банку.</li>
+</ul>
+
+<h2>Коли варто подивитися на ОВДП</h2>
+<ul>
+<li>Сума більша, ніж ви хочете тримати в одному банку.</li>
+<li>Ви готові тримати облігацію до погашення і не залежати від ринкової ціни.</li>
+<li>Порівняння дохідності «на руки» вигідніше, ніж у депозитів на той самий строк.</li>
+</ul>
+
+<div class="box"><h3>Як порівнювати чесно</h3><ul>
+<li>Беріть однаковий строк і однакову валюту.</li>
+<li>Рахуйте дохід після податків і комісій. Актуальні податкові правила — на <a href="https://tax.gov.ua" rel="noopener">tax.gov.ua</a>.</li>
+<li>Не обов'язково обирати щось одне: частину грошей можна тримати на депозиті, частину — в ОВДП.</li>
+</ul></div>
+<p>Детальніше — у статтях <a href="/statti/bank-zbankrutuvav-depozyt/">про гарантування вкладів</a> і <a href="/statti/ovdp/">про ОВДП</a>, а дохід депозиту можна порахувати в <a href="/kalkulyatory/#deposit">калькуляторі</a>.</p>
+""",
+        "cta": ("/kalkulyatory/#deposit", "Порахувати депозит"),
+        "disc": True,
+    },
+    {
+        "slug": "keshbek-i-bonusy-bankiv",
+        "tag": "Банки",
+        "title": "Кешбек і бонуси банків: як отримати вигоду й не переплатити",
+        "desc": "Як працюють кешбек, бонуси за відкриття картки й акції банків — і на чому люди втрачають більше, ніж отримують.",
+        "date": "2026-11-25", "minutes": 4,
+        "body": """
+<p>Банки змагаються за клієнтів: дають кешбек, бонуси за відкриття картки чи першу покупку. Це справжні гроші, якщо грати за правилами і не витрачати більше заради бонусу.</p>
+
+<h2>Які бувають бонуси</h2>
+<ul>
+<li><strong>Кешбек</strong> — повернення частини суми покупки в певних категоріях.</li>
+<li><strong>Бонус за відкриття картки</strong> чи за першу покупку, часто з умовою витратити певну суму.</li>
+<li><strong>Реферальні бонуси</strong> — за запрошення друзів.</li>
+</ul>
+
+<h2>Як не переплатити</h2>
+<ol>
+<li><strong>Читайте умови</strong> до кінця: мінімальна сума покупок, строки, які категорії враховуються.</li>
+<li><strong>Перевіряйте тарифи:</strong> плата за обслуговування чи випуск картки може «з'їсти» весь бонус.</li>
+<li><strong>Не купуйте заради кешбеку.</strong> 5% повернення від непотрібної покупки — це 95% втрат.</li>
+<li><strong>Обережно з кредитним лімітом:</strong> бонуси на кредитній картці не варті відсотків, якщо не встигнути погасити борг у пільговий період.</li>
+<li><strong>Відкривайте картки лише в банках</strong> і через офіційні застосунки чи сайти.</li>
+</ol>
+
+<div class="box"><h3>Правило одного рядка</h3>
+<p style="margin:0">Бонус вигідний, якщо ви отримали б цю послугу й так, а умови не змушують вас витрачати більше чи платити за обслуговування.</p></div>
+<p>Огляд бонусів кількох банків — у відео TradFi8 <a href="https://www.youtube.com/watch?v=Ge88UwOzfLY" rel="noopener">«Як заробити 100, 200 або навіть 1000 грн? Бонуси 9 банків»</a>. Умови акцій змінюються — перевіряйте їх на сайті банку перед оформленням.</p>
+""",
+    },
+    {
+        "slug": "finansova-podushka",
+        "tag": "Бюджет",
+        "title": "Фінансова подушка: скільки потрібно і де її тримати",
+        "desc": "Навіщо потрібен резерв на непередбачені витрати, як порахувати його розмір і де зберігати.",
+        "date": "2026-11-25", "minutes": 4,
+        "body": """
+<p>Фінансова подушка — це гроші на випадок, коли все йде не за планом: втрата роботи, хвороба, ремонт авто чи техніки. Вона рятує від боргів і поспішних рішень.</p>
+
+<h2>Скільки потрібно</h2>
+<p>Найчастіше радять мати запас на <strong>3–6 місяців звичайних витрат</strong>. Рахуйте саме витрати, а не дохід: житло, їжа, транспорт, зв'язок, кредити, ліки.</p>
+<ul>
+<li>Ближче до <strong>3 місяців</strong> — якщо дохід стабільний і в родині кілька людей заробляють.</li>
+<li>Ближче до <strong>6 місяців і більше</strong> — якщо дохід нерегулярний, ви ФОП чи єдиний годувальник.</li>
+</ul>
+<p>Приклад: витрати 20 000 ₴ на місяць → подушка на 3–6 місяців становить <span class="num">60 000–120 000 ₴</span>.</p>
+
+<h2>Де тримати</h2>
+<ul>
+<li>Окремо від картки для щоденних витрат, щоб не витратити випадково.</li>
+<li>Так, щоб гроші можна було отримати швидко: накопичувальний рахунок чи депозит із можливістю дострокового зняття.</li>
+<li>Частину — у валюті, якщо ваші витрати залежать від курсу.</li>
+</ul>
+
+<div class="box"><h3>Як зібрати</h3><ul>
+<li>Почніть з цілі в 1 місяць витрат — вона досяжна швидше, ніж здається.</li>
+<li>Відкладайте автоматично в день зарплати — див. <a href="/statti/odna-moneta-z-desiaty/">правило «одна монета з десяти»</a>.</li>
+<li>Використали подушку — поповніть її, перш ніж інвестувати.</li>
+</ul></div>
+<p>Порахуйте свою подушку і строк її накопичення в <a href="/kalkulyatory/#cushion">калькуляторі</a>.</p>
+""",
+        "cta": ("/kalkulyatory/#cushion", "Порахувати подушку"),
+    },
+    {
+        "slug": "yak-ne-potrapyty-na-shakhraiv",
+        "tag": "Безпека",
+        "title": "Як не потрапити на гачок шахраїв: 7 правил",
+        "desc": "Банк ніколи не просить PIN, CVV і коди з SMS. Розбираємо, як діють шахраї і як захистити свої гроші.",
+        "date": "2026-11-25", "minutes": 5,
+        "body": """
+<p>Більшість грошей люди втрачають не через злам банку, а тому що шахраї переконують їх самих віддати доступ. За даними НБУ, на психологічні маніпуляції припадає <span class="num">84%</span> суми збитків від карткового шахрайства.</p>
+
+<h2>7 правил</h2>
+<ol>
+<li><strong>Банк ніколи не питає</strong> PIN-код, CVV-код, пароль до інтернет-банкінгу чи код із SMS. Хто питає — шахрай.</li>
+<li><strong>Дзвонять «з банку» чи «зі служби безпеки»?</strong> Завершіть розмову й самі передзвоніть на офіційний номер із сайту банку чи картки.</li>
+<li><strong>Вас квапять, лякають блокуванням</strong> чи кримінальною справою — це привід зупинитися, а не діяти швидше.</li>
+<li><strong>Не переходьте за посиланнями</strong> з SMS, месенджерів чи пошти, якщо не впевнені в джерелі. Підробні сайти копіюють стиль банків і державних установ.</li>
+<li><strong>Продаєте щось онлайн?</strong> Щоб отримати гроші, достатньо номера картки чи IBAN. Вводити дані картки на сторонніх сторінках «для отримання коштів» не потрібно.</li>
+<li><strong>Для покупок в інтернеті</strong> зручно мати окрему віртуальну картку з невеликою сумою.</li>
+<li><strong>Не зберігайте PIN-коди й паролі</strong> в телефоні чи нотатках.</li>
+</ol>
+
+<div class="box"><h3>Якщо гроші вже списали</h3><ul>
+<li>Одразу заблокуйте картку в застосунку чи за телефоном банку.</li>
+<li>Повідомте банк про шахрайську операцію якомога швидше.</li>
+<li>Зверніться до кіберполіції.</li>
+</ul></div>
+<p>НБУ разом із кіберполіцією проводить кампанію з платіжної безпеки #ШахрайГудбай. Про захист у криптовалюті читайте статтю <a href="/statti/seed-fraza/">про seed-фразу</a>.</p>
+""",
+    },
+    {
+        "slug": "infliatsiia",
+        "tag": "Економіка",
+        "title": "Інфляція простими словами: чому гроші дешевшають",
+        "desc": "Що таке інфляція, який прогноз НБУ і як захистити заощадження від знецінення.",
+        "date": "2026-11-25", "minutes": 4,
+        "body": """
+<p>Інфляція — це зростання цін. Коли ціни ростуть, на ту саму суму можна купити менше. Тому гроші «під матрацом» щороку тихо втрачають вартість.</p>
+
+<h2>Приклад</h2>
+<p>Якщо за рік ціни зросли на 12,5%, то 10 000 ₴ через рік купуватимуть стільки ж, скільки сьогодні купують приблизно <span class="num">8 889 ₴</span>.</p>
+
+<h2>Що прогнозує НБУ</h2>
+<p>За Інфляційним звітом НБУ (листопад 2026 року), інфляція пришвидшиться до <strong>12,5%</strong> наприкінці 2026 року, а далі почне знижуватися: до <strong>7,3%</strong> наприкінці 2027 року і до <strong>5%</strong> у 2028 році. Свіжі дані й прогнози — на <a href="https://bank.gov.ua" rel="noopener">bank.gov.ua</a>.</p>
+<p>Щоб стримати інфляцію, НБУ підвищує облікову ставку — про це у статті <a href="/statti/oblikova-stavka/">«Облікова ставка за 2 хвилини»</a>.</p>
+
+<h2>Як захистити заощадження</h2>
+<ul>
+<li><strong>Не тримайте великі суми готівкою</strong> без потреби.</li>
+<li><strong>Порівнюйте дохідність з інфляцією.</strong> Якщо депозит дає менше, ніж зростають ціни, ви втрачаєте в реальній вартості.</li>
+<li><strong>Розподіляйте заощадження</strong> між різними інструментами й валютами.</li>
+<li><strong>Інвестуйте у себе:</strong> навички, що підвищують дохід, найкраще захищають від інфляції.</li>
+</ul>
+""",
+        "disc": True,
+    },
+    {
+        "slug": "persha-investytsiia",
+        "tag": "Інвестиції",
+        "title": "Перша інвестиція: 5 питань, які варто поставити собі",
+        "desc": "Перш ніж вкладати гроші, дайте відповідь на п'ять простих запитань. Вони вбережуть від найчастіших помилок.",
+        "date": "2026-11-25", "minutes": 5,
+        "body": """
+<p>Інвестиції — це спосіб змусити гроші працювати. Але починати з вибору «куди вкласти» — помилка. Спершу дайте відповідь на п'ять запитань.</p>
+
+<h2>1. Навіщо мені ці гроші?</h2>
+<p>Ціль визначає все: накопичення на житло через 5 років і пенсія через 30 — це різні стратегії.</p>
+
+<h2>2. Коли вони знадобляться?</h2>
+<p>Чим довший строк, тим більше часу пережити просідання. Гроші, потрібні за рік, ризикувати не варто.</p>
+
+<h2>3. Чи є в мене фінансова подушка?</h2>
+<p>Спершу резерв на 3–6 місяців витрат, потім інвестиції. Інакше першу ж несподівану витрату доведеться покривати продажем активів у невдалий момент. Див. статтю <a href="/statti/finansova-podushka/">про фінансову подушку</a>.</p>
+
+<h2>4. Скільки я готовий втратити?</h2>
+<p>Будь-яка інвестиція з потенційно вищим доходом має вищий ризик. Розподіляйте гроші між різними інструментами — це називають диверсифікацією.</p>
+
+<h2>5. Хто тримає мої гроші і скільки це коштує?</h2>
+<ul>
+<li>Працюйте лише з ліцензованими фінансовими установами. Ліцензію брокера можна перевірити на сайті Національної комісії з цінних паперів та фондового ринку.</li>
+<li>Рахуйте комісії: навіть 1–2% на рік помітно зменшують результат на довгому строку.</li>
+<li>«Гарантований високий дохід» — ознака шахрайства, а не вигідної пропозиції.</li>
+</ul>
+
+<div class="box"><h3>Пам'ятайте</h3>
+<p style="margin:0">Час працює на вас завдяки складному відсотку — див. статтю <a href="/statti/skladnyi-vidsotok/">«Відсотки на відсотки»</a>. Про мислення інвестора — відео TradFi8 <a href="https://www.youtube.com/watch?v=qDvUyLxNDcg" rel="noopener">про книгу «Багатий тато, бідний тато»</a>.</p></div>
+""",
+        "disc": True,
+    },
+]
+
+VIDEOS = [
+    # (id, назва, тема) — лише фінансові й тематичні відео, без фонових (камін, природа)
+    ("ReQemoPC7iQ", "Стабільна робота — це найбільший ризик? Секрет, який знають підприємці", "Мислення"),
+    ("Ge88UwOzfLY", "Як заробити 100, 200 або навіть 1000 грн? Бонуси 9 банків", "Банки"),
+    ("bY7Sa9UioAY", "Він продав «Феррарі» і зник на 3 роки: 7 символів щасливого життя", "Мислення"),
+    ("1zTb7b_u5T4", "Заплати собі першим: 2 правила фінансової грамотності, яких не вчать у школі", "Фінансова грамотність"),
+    ("qDvUyLxNDcg", "Книга, яка змінила моє життя: «Багатий тато, бідний тато»", "Книги"),
+    ("Exk_H21RcAI", "Харизму можна прокачати! Відгук про тренінг «Оратор за 2 дні»", "Мислення"),
+    ("Zvxv4Y2OBow", "Чому висока зарплата не робить вас багатими? «Багатий тато, бідний тато»", "Книги"),
+    ("p-QEY-hECAw", "Роберт Кійосакі: мотивація, яка змінює життя", "Книги"),
+    ("Tl_CRRrXVEY", "Куди зникають гроші? Облік фінансів за 5 кроків. Урок 2", "Фінансова грамотність"),
+    ("BxFTlAvNkis", "Спочатку заплати собі: як почати відкладати гроші. Урок 1", "Фінансова грамотність"),
+    ("1mRiuyCaR-M", "Що таке традиційні фінанси і чому вам варто в них розібратися", "Фінансова грамотність"),
 ]
 
 
@@ -249,16 +457,35 @@ def fmt_date(d):
 
 NAV = """<nav class="nav"><div class="in">
   <a class="logo" href="/">Trad<b>Fi</b>8</a>
-  <div class="links"><a href="/statti/">Статті</a><a href="/#calc">Калькулятор</a><a class="hide-m" href="/#products">Курси й гайди</a><a class="hide-m" href="/#video">Відео</a></div>
+  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a href="/video/">Відео</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
 </div></nav>"""
 
 FOOTER = """<footer><div class="in">
 Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
-© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a>
 </div></footer>"""
 
+FILTER_JS = """<script>
+(function(){
+  var q=document.getElementById('q'), chips=[].slice.call(document.querySelectorAll('.chip')),
+      items=[].slice.call(document.querySelectorAll('[data-tag]')), empty=document.getElementById('empty'), cur='';
+  function apply(){
+    var t=(q&&q.value||'').toLowerCase().trim(), n=0;
+    items.forEach(function(el){
+      var ok=(!cur||el.getAttribute('data-tag')===cur)&&(!t||el.textContent.toLowerCase().indexOf(t)>-1);
+      el.hidden=!ok; if(ok)n++;
+    });
+    if(empty)empty.hidden=n>0;
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    cur=c.getAttribute('data-f'); chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')}); apply();
+  })});
+  if(q)q.addEventListener('input',apply);
+})();
+</script>"""
 
-def head(title, desc, url, ld):
+
+def head(title, desc, url, ld, og_type="article"):
     return f"""<!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -271,7 +498,7 @@ def head(title, desc, url, ld):
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta property="og:type" content="article">
+<meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="TradFi8">
 <meta property="og:locale" content="uk_UA">
 <meta property="og:url" content="{url}">
@@ -291,6 +518,24 @@ def head(title, desc, url, ld):
 def card(a):
     return (f'<a class="card" href="/statti/{a["slug"]}/"><span class="tag">{esc(a["tag"])}</span>'
             f'<h3>{esc(a["title"])}</h3><p>{esc(a["desc"])}</p></a>')
+
+
+def related(i):
+    a = ARTICLES[i]
+    same = [o for o in ARTICLES if o is not a and o["tag"] == a["tag"]]
+    rest = [ARTICLES[(i + k) % len(ARTICLES)] for k in range(1, len(ARTICLES))]
+    out = []
+    for o in same + rest:
+        if o not in out:
+            out.append(o)
+    return out[:3]
+
+
+def write(path, text):
+    d = os.path.join(ROOT, path)
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
+        f.write(text)
 
 
 def build_article(a, others):
@@ -326,7 +571,7 @@ def build_article(a, others):
   <article class="body">
 {a['body'].strip()}
   </article>
-  <div class="cta"><a class="btn" href="{cta_href}">{cta_text}</a><a class="btn light" href="https://youtube.com/@TradFi8">Відео на YouTube</a></div>
+  <div class="cta"><a class="btn" href="{cta_href}">{cta_text}</a><a class="btn light" href="/video/">Відео TradFi8</a></div>
   {disc}
 </div>
 <section class="more"><h2>Читайте також</h2><div class="cards">
@@ -337,10 +582,13 @@ def build_article(a, others):
 </body>
 </html>
 """
-    d = os.path.join(ROOT, "statti", a["slug"])
-    os.makedirs(d, exist_ok=True)
-    with open(os.path.join(d, "index.html"), "w", encoding="utf-8") as f:
-        f.write(out)
+    write(os.path.join("statti", a["slug"]), out)
+
+
+def chips(tags):
+    b = '<button class="chip" type="button" data-f="" aria-pressed="true">Усі</button>'
+    b += "".join(f'<button class="chip" type="button" data-f="{esc(t)}" aria-pressed="false">{esc(t)}</button>' for t in tags)
+    return f'<div class="chips" role="group" aria-label="Категорії">{b}</div>'
 
 
 def build_index():
@@ -349,31 +597,150 @@ def build_index():
           "url": url, "inLanguage": "uk",
           "hasPart": [{"@type": "Article", "headline": a["title"], "url": f"{SITE}/statti/{a['slug']}/"}
                       for a in ARTICLES]}
-    desc = "Статті TradFi8 про гроші простими словами: депозити, складний відсоток, ОВДП, бюджет, крипто й економіка."
-    out = head("Статті — TradFi8", desc, url, ld)
+    desc = "Статті TradFi8 про гроші простими словами: депозити, ОВДП, бюджет, інфляція, безпека, крипто й інвестиції."
+    out = head("Статті — TradFi8", desc, url, ld, "website")
+    tags = []
+    for a in ARTICLES:
+        if a["tag"] not in tags:
+            tags.append(a["tag"])
     items = "\n".join(
-        f'<a class="card" href="/statti/{a["slug"]}/"><span class="tag">{esc(a["tag"])} · {a["minutes"]} хв</span>'
-        f'<h3>{esc(a["title"])}</h3><p>{esc(a["desc"])}</p></a>' for a in ARTICLES)
+        f'<a class="card" data-tag="{esc(a["tag"])}" href="/statti/{a["slug"]}/"><span class="tag">{esc(a["tag"])} · {a["minutes"]} хв</span>'
+        f'<h2 class="ct">{esc(a["title"])}</h2><p>{esc(a["desc"])}</p></a>' for a in ARTICLES)
     out += f"""<main>
 <div class="wrap">
   <div class="crumbs"><a href="/">Головна</a> › Статті</div>
-  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. Нові матеріали щодня.</p></header>
+  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. {len(ARTICLES)} матеріалів, нові щодня.</p></header>
+  <label class="search"><span class="sr">Пошук статей</span><input id="q" type="search" placeholder="Пошук: депозит, шахраї, інфляція…" autocomplete="off"></label>
+  {chips(tags)}
   <div class="list">
 {items}
+  <p id="empty" class="emptymsg" hidden>Нічого не знайдено. Спробуйте інше слово.</p>
   </div>
 </div>
 </main>
 {FOOTER}
+{FILTER_JS}
 </body>
 </html>
 """
-    os.makedirs(os.path.join(ROOT, "statti"), exist_ok=True)
-    with open(os.path.join(ROOT, "statti", "index.html"), "w", encoding="utf-8") as f:
-        f.write(out)
+    write("statti", out)
+
+
+def build_video():
+    url = f"{SITE}/video/"
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Відео TradFi8", "url": url,
+          "inLanguage": "uk",
+          "hasPart": [{"@type": "VideoObject", "name": t, "url": f"https://www.youtube.com/watch?v={v}",
+                       "thumbnailUrl": f"https://i.ytimg.com/vi/{v}/hqdefault.jpg"} for v, t, _ in VIDEOS]}
+    desc = "Відео TradFi8 про фінансову грамотність, гроші й мислення: уроки, огляди книг, бонуси банків."
+    out = head("Відео — TradFi8", desc, url, ld, "website")
+    tags = []
+    for _, _, g in VIDEOS:
+        if g not in tags:
+            tags.append(g)
+    cards = "\n".join(
+        f'<a class="vcard" data-tag="{esc(g)}" href="https://www.youtube.com/watch?v={v}" rel="noopener">'
+        f'<span class="thumb"><img src="https://i.ytimg.com/vi/{v}/mqdefault.jpg" alt="" loading="lazy" width="320" height="180">'
+        f'<span class="play" aria-hidden="true"></span></span><span class="tag">{esc(g)}</span><span class="vt">{esc(t)}</span></a>'
+        for v, t, g in VIDEOS)
+    out += f"""<main>
+<div class="wrap wide">
+  <div class="crumbs"><a href="/">Головна</a> › Відео</div>
+  <header class="art"><h1>Відео.</h1><p class="lead">Фінансова грамотність, мислення й огляди книг — на YouTube-каналі TradFi8.</p></header>
+  {chips(tags)}
+  <div class="vgrid">
+{cards}
+  </div>
+  <div class="cta"><a class="btn" href="https://youtube.com/@TradFi8?sub_confirmation=1">Підписатися на канал</a><a class="btn light" href="https://youtube.com/@TradFi8/shorts">Короткі відео (Shorts)</a></div>
+</div>
+</main>
+{FOOTER}
+{FILTER_JS}
+</body>
+</html>
+"""
+    write("video", out)
+
+
+CALC_JS = """<script>
+(function(){
+  function v(id){var x=parseFloat((document.getElementById(id).value||'').replace(',','.'));return isFinite(x)?x:0}
+  function f(x){return Math.round(x).toLocaleString('uk-UA')+' ₴'}
+  function set(id,t){document.getElementById(id).textContent=t}
+  function dep(){
+    var P=v('d_sum'),r=v('d_rate')/100,m=Math.max(1,Math.round(v('d_months'))),tax=v('d_tax')/100,cap=document.getElementById('d_cap').checked;
+    var gross=cap?P*Math.pow(1+r/12,m)-P:P*r*m/12, net=gross*(1-tax);
+    set('d_gross',f(gross)); set('d_net',f(net)); set('d_total',f(P+net));
+  }
+  function cred(){
+    var S=v('c_sum'),r=v('c_rate')/100/12,n=Math.max(1,Math.round(v('c_months')));
+    var pay=r?S*r/(1-Math.pow(1+r,-n)):S/n;
+    set('c_pay',f(pay)); set('c_total',f(pay*n)); set('c_over',f(pay*n-S));
+  }
+  function cush(){
+    var e=v('p_exp'),k=v('p_months'),h=v('p_have'),s=v('p_save'),need=Math.max(0,e*k-h);
+    set('p_goal',f(e*k)); set('p_need',f(need));
+    set('p_time', need<=0?'вже зібрано ✅':(s>0?Math.ceil(need/s)+' міс.':'вкажіть суму внеску'));
+  }
+  [].forEach.call(document.querySelectorAll('#deposit input'),function(i){i.addEventListener('input',dep)});
+  [].forEach.call(document.querySelectorAll('#credit input'),function(i){i.addEventListener('input',cred)});
+  [].forEach.call(document.querySelectorAll('#cushion input'),function(i){i.addEventListener('input',cush)});
+  dep();cred();cush();
+})();
+</script>"""
+
+
+def fld(i, label, val, step="any", extra=""):
+    return f'<label class="fld"><span>{label}</span><input id="{i}" type="number" inputmode="decimal" value="{val}" step="{step}" min="0"{extra}></label>'
+
+
+def build_calcs():
+    url = f"{SITE}/kalkulyatory/"
+    ld = {"@context": "https://schema.org", "@type": "WebPage", "name": "Фінансові калькулятори TradFi8", "url": url, "inLanguage": "uk"}
+    desc = "Калькулятори депозиту, кредиту та фінансової подушки: порахуйте дохід, щомісячний платіж і переплату за кілька секунд."
+    out = head("Калькулятори: депозит, кредит, фінансова подушка — TradFi8", desc, url, ld, "website")
+    out += f"""<main>
+<div class="wrap">
+  <div class="crumbs"><a href="/">Головна</a> › Калькулятори</div>
+  <header class="art"><h1>Калькулятори.</h1><p class="lead">Порахуйте дохід депозиту, платіж за кредитом і свою фінансову подушку. Складний відсоток — <a href="/#calc">на головній</a>.</p>
+  <div class="chips static"><a class="chip" href="#deposit">Депозит</a><a class="chip" href="#credit">Кредит</a><a class="chip" href="#cushion">Фінансова подушка</a></div></header>
+
+  <section class="calcbox" id="deposit" aria-labelledby="h-dep">
+    <h2 id="h-dep">Депозит</h2>
+    <div class="fields">{fld('d_sum','Сума, ₴',50000,'1000')}{fld('d_rate','Ставка, % річних',14,'0.1')}{fld('d_months','Строк, місяців',12,'1')}{fld('d_tax','Податки, %',0,'0.5')}</div>
+    <label class="chk"><input id="d_cap" type="checkbox" checked> Капіталізація щомісяця (відсотки додаються до суми)</label>
+    <div class="res"><div><b id="d_gross"></b>відсотки до податків</div><div><b id="d_net"></b>дохід «на руки»</div><div><b id="d_total"></b>отримаєте разом</div></div>
+    <p class="note">Ставка й податки — умовні: вкажіть ставку свого банку, а актуальні податки перевірте на <a href="https://tax.gov.ua" rel="noopener">tax.gov.ua</a>. Див. також статтю <a href="/statti/depozyt-chy-ovdp/">«Депозит чи ОВДП»</a>.</p>
+  </section>
+
+  <section class="calcbox" id="credit" aria-labelledby="h-cred">
+    <h2 id="h-cred">Кредит</h2>
+    <div class="fields">{fld('c_sum','Сума кредиту, ₴',100000,'1000')}{fld('c_rate','Ставка, % річних',30,'0.1')}{fld('c_months','Строк, місяців',24,'1')}</div>
+    <div class="res"><div><b id="c_pay"></b>платіж щомісяця</div><div><b id="c_total"></b>заплатите разом</div><div><b id="c_over"></b>переплата</div></div>
+    <p class="note">Розрахунок для рівних щомісячних платежів (ануїтет). Реальна вартість кредиту залежить від комісій і страховок — дивіться реальну річну процентну ставку в договорі.</p>
+  </section>
+
+  <section class="calcbox" id="cushion" aria-labelledby="h-cush">
+    <h2 id="h-cush">Фінансова подушка</h2>
+    <div class="fields">{fld('p_exp','Витрати на місяць, ₴',20000,'500')}{fld('p_months','На скільки місяців',6,'1')}{fld('p_have','Вже відкладено, ₴',0,'500')}{fld('p_save','Відкладаю щомісяця, ₴',3000,'500')}</div>
+    <div class="res"><div><b id="p_goal"></b>розмір подушки</div><div><b id="p_need"></b>ще потрібно</div><div><b id="p_time"></b>до мети</div></div>
+    <p class="note">Найчастіше радять мати запас на 3–6 місяців витрат. Детальніше — у статті <a href="/statti/finansova-podushka/">«Фінансова подушка»</a>.</p>
+  </section>
+
+  <p class="disc">Розрахунки приблизні й мають освітній характер. Не є фінансовою порадою.</p>
+</div>
+</main>
+{FOOTER}
+{CALC_JS}
+</body>
+</html>
+"""
+    write("kalkulyatory", out)
 
 
 def build_sitemap():
-    urls = [(SITE + "/", "1.0", "daily"), (SITE + "/statti/", "0.9", "daily")]
+    urls = [(SITE + "/", "1.0", "daily"), (SITE + "/statti/", "0.9", "daily"),
+            (SITE + "/kalkulyatory/", "0.8", "monthly"), (SITE + "/video/", "0.7", "weekly")]
     urls += [(f"{SITE}/statti/{a['slug']}/", "0.8", "weekly") for a in ARTICLES]
     body = "\n".join(
         f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{UPDATED}</lastmod>\n    <changefreq>{c}</changefreq>\n    <priority>{p}</priority>\n  </url>"
@@ -385,8 +752,9 @@ def build_sitemap():
 
 if __name__ == "__main__":
     for i, a in enumerate(ARTICLES):
-        others = [ARTICLES[(i + k) % len(ARTICLES)] for k in (1, 2, 3)]
-        build_article(a, others)
+        build_article(a, related(i))
     build_index()
+    build_video()
+    build_calcs()
     build_sitemap()
-    print(f"Готово: {len(ARTICLES)} статей, /statti/, sitemap.xml")
+    print(f"Готово: {len(ARTICLES)} статей, /statti/, /video/ ({len(VIDEOS)}), /kalkulyatory/, sitemap.xml")

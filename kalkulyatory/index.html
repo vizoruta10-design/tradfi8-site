@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятори: депозит, кредит, фінансова подушка — TradFi8</title>
+<meta name="description" content="Калькулятори депозиту, кредиту та фінансової подушки: порахуйте дохід, щомісячний платіж і переплату за кілька секунд.">
+<link rel="canonical" href="https://tradfi8.com.ua/kalkulyatory/">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TradFi8">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:url" content="https://tradfi8.com.ua/kalkulyatory/">
+<meta property="og:title" content="Калькулятори: депозит, кредит, фінансова подушка — TradFi8">
+<meta property="og:description" content="Калькулятори депозиту, кредиту та фінансової подушки: порахуйте дохід, щомісячний платіж і переплату за кілька секунд.">
+<meta property="og:image" content="https://tradfi8.com.ua/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tradfi8.com.ua/og-image.png">
+<link rel="stylesheet" href="/assets/article.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Фінансові калькулятори TradFi8", "url": "https://tradfi8.com.ua/kalkulyatory/", "inLanguage": "uk"}</script>
+</head>
+<body>
+<nav class="nav"><div class="in">
+  <a class="logo" href="/">Trad<b>Fi</b>8</a>
+  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a href="/video/">Відео</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
+</div></nav>
+<main>
+<div class="wrap">
+  <div class="crumbs"><a href="/">Головна</a> › Калькулятори</div>
+  <header class="art"><h1>Калькулятори.</h1><p class="lead">Порахуйте дохід депозиту, платіж за кредитом і свою фінансову подушку. Складний відсоток — <a href="/#calc">на головній</a>.</p>
+  <div class="chips static"><a class="chip" href="#deposit">Депозит</a><a class="chip" href="#credit">Кредит</a><a class="chip" href="#cushion">Фінансова подушка</a></div></header>
+
+  <section class="calcbox" id="deposit" aria-labelledby="h-dep">
+    <h2 id="h-dep">Депозит</h2>
+    <div class="fields"><label class="fld"><span>Сума, ₴</span><input id="d_sum" type="number" inputmode="decimal" value="50000" step="1000" min="0"></label><label class="fld"><span>Ставка, % річних</span><input id="d_rate" type="number" inputmode="decimal" value="14" step="0.1" min="0"></label><label class="fld"><span>Строк, місяців</span><input id="d_months" type="number" inputmode="decimal" value="12" step="1" min="0"></label><label class="fld"><span>Податки, %</span><input id="d_tax" type="number" inputmode="decimal" value="0" step="0.5" min="0"></label></div>
+    <label class="chk"><input id="d_cap" type="checkbox" checked> Капіталізація щомісяця (відсотки додаються до суми)</label>
+    <div class="res"><div><b id="d_gross"></b>відсотки до податків</div><div><b id="d_net"></b>дохід «на руки»</div><div><b id="d_total"></b>отримаєте разом</div></div>
+    <p class="note">Ставка й податки — умовні: вкажіть ставку свого банку, а актуальні податки перевірте на <a href="https://tax.gov.ua" rel="noopener">tax.gov.ua</a>. Див. також статтю <a href="/statti/depozyt-chy-ovdp/">«Депозит чи ОВДП»</a>.</p>
+  </section>
+
+  <section class="calcbox" id="credit" aria-labelledby="h-cred">
+    <h2 id="h-cred">Кредит</h2>
+    <div class="fields"><label class="fld"><span>Сума кредиту, ₴</span><input id="c_sum" type="number" inputmode="decimal" value="100000" step="1000" min="0"></label><label class="fld"><span>Ставка, % річних</span><input id="c_rate" type="number" inputmode="decimal" value="30" step="0.1" min="0"></label><label class="fld"><span>Строк, місяців</span><input id="c_months" type="number" inputmode="decimal" value="24" step="1" min="0"></label></div>
+    <div class="res"><div><b id="c_pay"></b>платіж щомісяця</div><div><b id="c_total"></b>заплатите разом</div><div><b id="c_over"></b>переплата</div></div>
+    <p class="note">Розрахунок для рівних щомісячних платежів (ануїтет). Реальна вартість кредиту залежить від комісій і страховок — дивіться реальну річну процентну ставку в договорі.</p>
+  </section>
+
+  <section class="calcbox" id="cushion" aria-labelledby="h-cush">
+    <h2 id="h-cush">Фінансова подушка</h2>
+    <div class="fields"><label class="fld"><span>Витрати на місяць, ₴</span><input id="p_exp" type="number" inputmode="decimal" value="20000" step="500" min="0"></label><label class="fld"><span>На скільки місяців</span><input id="p_months" type="number" inputmode="decimal" value="6" step="1" min="0"></label><label class="fld"><span>Вже відкладено, ₴</span><input id="p_have" type="number" inputmode="decimal" value="0" step="500" min="0"></label><label class="fld"><span>Відкладаю щомісяця, ₴</span><input id="p_save" type="number" inputmode="decimal" value="3000" step="500" min="0"></label></div>
+    <div class="res"><div><b id="p_goal"></b>розмір подушки</div><div><b id="p_need"></b>ще потрібно</div><div><b id="p_time"></b>до мети</div></div>
+    <p class="note">Найчастіше радять мати запас на 3–6 місяців витрат. Детальніше — у статті <a href="/statti/finansova-podushka/">«Фінансова подушка»</a>.</p>
+  </section>
+
+  <p class="disc">Розрахунки приблизні й мають освітній характер. Не є фінансовою порадою.</p>
+</div>
+</main>
+<footer><div class="in">
+Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a>
+</div></footer>
+<script>
+(function(){
+  function v(id){var x=parseFloat((document.getElementById(id).value||'').replace(',','.'));return isFinite(x)?x:0}
+  function f(x){return Math.round(x).toLocaleString('uk-UA')+' ₴'}
+  function set(id,t){document.getElementById(id).textContent=t}
+  function dep(){
+    var P=v('d_sum'),r=v('d_rate')/100,m=Math.max(1,Math.round(v('d_months'))),tax=v('d_tax')/100,cap=document.getElementById('d_cap').checked;
+    var gross=cap?P*Math.pow(1+r/12,m)-P:P*r*m/12, net=gross*(1-tax);
+    set('d_gross',f(gross)); set('d_net',f(net)); set('d_total',f(P+net));
+  }
+  function cred(){
+    var S=v('c_sum'),r=v('c_rate')/100/12,n=Math.max(1,Math.round(v('c_months')));
+    var pay=r?S*r/(1-Math.pow(1+r,-n)):S/n;
+    set('c_pay',f(pay)); set('c_total',f(pay*n)); set('c_over',f(pay*n-S));
+  }
+  function cush(){
+    var e=v('p_exp'),k=v('p_months'),h=v('p_have'),s=v('p_save'),need=Math.max(0,e*k-h);
+    set('p_goal',f(e*k)); set('p_need',f(need));
+    set('p_time', need<=0?'вже зібрано ✅':(s>0?Math.ceil(need/s)+' міс.':'вкажіть суму внеску'));
+  }
+  [].forEach.call(document.querySelectorAll('#deposit input'),function(i){i.addEventListener('input',dep)});
+  [].forEach.call(document.querySelectorAll('#credit input'),function(i){i.addEventListener('input',cred)});
+  [].forEach.call(document.querySelectorAll('#cushion input'),function(i){i.addEventListener('input',cush)});
+  dep();cred();cush();
+})();
+</script>
+</body>
+</html>
