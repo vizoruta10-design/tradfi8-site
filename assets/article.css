@@ -109,3 +109,7 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #0a84
 .note{font-size:14px;color:var(--muted);margin-top:16px}
 @media(max-width:600px){.fields,.res{grid-template-columns:1fr}}
 .card h2.ct{font-size:20px;line-height:1.2;letter-spacing:-.02em;margin:6px 0 8px}
+/* зони натискання ≥ 24 px (Google: target-size) */
+.crumbs a{display:inline-block;padding:6px 0}
+footer a{display:inline-block;padding:6px 2px}
+.nav .links a{display:inline-block;padding:12px 0}
