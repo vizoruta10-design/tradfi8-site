@@ -6,6 +6,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Segoe UI",Ro
      -webkit-font-smoothing:antialiased;line-height:1.6;letter-spacing:-.01em}
 a{color:var(--blue);text-decoration:none}
 a:hover{text-decoration:underline}
+main p a,main li a{text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
 
 .nav{position:sticky;top:0;z-index:50;height:48px;background:rgba(251,251,253,.8);
      backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.08)}
