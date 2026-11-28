@@ -9,6 +9,11 @@
 import html
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from articles_q1 import NEW_ARTICLES  # noqa: E402
+import pages_q1  # noqa: E402
 
 SITE = "https://tradfi8.com.ua"
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -427,9 +432,9 @@ ARTICLES = [
 <li>Міністерство фінансів України, ОВДП — <a href="https://mof.gov.ua" rel="noopener">mof.gov.ua</a>.</li>
 <li>Податковий кодекс України — <a href="https://zakon.rada.gov.ua/laws/show/2755-17" rel="noopener">zakon.rada.gov.ua</a>; роз'яснення ДПС — <a href="https://tax.gov.ua" rel="noopener">tax.gov.ua</a>.</li>
 </ul>
-<p>Детальніше — у статтях <a href="/statti/bank-zbankrutuvav-depozyt/">про гарантування вкладів</a> і <a href="/statti/ovdp/">про ОВДП</a>, а дохід депозиту можна порахувати в <a href="/kalkulyatory/#deposit">калькуляторі</a>.</p>
+<p>Детальніше — у статтях <a href="/statti/bank-zbankrutuvav-depozyt/">про гарантування вкладів</a> і <a href="/statti/ovdp/">про ОВДП</a>, а дохід депозиту можна порахувати в <a href="/kalkulyatory/depozyt/">калькуляторі</a>.</p>
 """,
-        "cta": ("/kalkulyatory/#deposit", "Порахувати депозит"),
+        "cta": ("/kalkulyatory/depozyt/", "Порахувати депозит"),
         "disc": True,
     },
     {
@@ -523,7 +528,7 @@ ARTICLES = [
 <li><strong>Витрачати подушку на бажане</strong>, а не на непередбачене. Відпустка й новий телефон — окремі цілі.</li>
 <li><strong>Збирати подушку замість погашення дорогого боргу.</strong> Якщо кредит під високий відсоток, спершу зберіть мінімальну подушку на місяць, а далі пришвидшіть погашення.</li>
 </ul>
-<p>Порахуйте свою подушку і строк її накопичення в <a href="/kalkulyatory/#cushion">калькуляторі</a>.</p>
+<p>Порахуйте свою подушку і строк її накопичення в <a href="/kalkulyatory/podushka/">калькуляторі</a>.</p>
 
 <h2>Джерела</h2>
 <ul class="src">
@@ -532,7 +537,7 @@ ARTICLES = [
 <li>Податковий кодекс України (оподаткування процентів за депозитами й ОВДП) — <a href="https://zakon.rada.gov.ua/laws/show/2755-17" rel="noopener">zakon.rada.gov.ua</a>.</li>
 </ul>
 """,
-        "cta": ("/kalkulyatory/#cushion", "Порахувати подушку"),
+        "cta": ("/kalkulyatory/podushka/", "Порахувати подушку"),
     },
     {
         "slug": "yak-ne-potrapyty-na-shakhraiv",
@@ -665,6 +670,12 @@ ARTICLES = [
     },
 ]
 
+ARTICLES = NEW_ARTICLES + ARTICLES
+
+# Безкоштовна аналітика без cookie (TRADFI8-149). Вставте сюди код лічильника, коли Руслан створить акаунт:
+# GoatCounter: '<script data-goatcounter="https://<код>.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+ANALYTICS = ""
+
 VIDEOS = [
     # (id, назва, тема) — лише фінансові й тематичні відео, без фонових (камін, природа)
     ("ReQemoPC7iQ", "Стабільна робота — це найбільший ризик? Секрет, який знають підприємці", "Мислення"),
@@ -692,13 +703,17 @@ def fmt_date(d):
 
 NAV = """<nav class="nav"><div class="in">
   <a class="logo" href="/">Trad<b>Fi</b>8</a>
-  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a href="/video/">Відео</a><a href="/zapytaty/">Питання</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
+  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a class="hide-xs" href="/video/">Відео</a><a href="/zapytaty/">Питання</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
 </div></nav>"""
 
 FOOTER = """<footer><div class="in">
 Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
-© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a><br>
+<a href="/pro-redaktsiiu/">Про редакцію</a> · <a href="/redaktsiina-polityka/">Редакційна політика</a> · <a href="/kontakty/">Контакти</a>
 </div></footer>"""
+
+BYLINE = ('<p class="byline">Підготувала <a href="/pro-redaktsiiu/">Редакція TradFi8</a> · автор — доктор філософії з економіки · '
+          '<a href="/redaktsiina-polityka/">як ми перевіряємо факти</a></p>')
 
 FILTER_JS = """<script>
 (function(){
@@ -744,7 +759,7 @@ def head(title, desc, url, ld, og_type="article"):
 <meta name="twitter:image" content="{SITE}/og-image.png">
 <link rel="stylesheet" href="/assets/article.css">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-</head>
+{ANALYTICS}</head>
 <body>
 {NAV}
 """
@@ -781,7 +796,8 @@ def build_article(a, others):
             {"@type": "Article", "headline": a["title"], "description": a["desc"], "inLanguage": "uk",
              "datePublished": a["date"], "dateModified": a.get("updated", UPDATED), "mainEntityOfPage": url,
              "image": f"{SITE}/og-image.png",
-             "author": {"@type": "Organization", "name": "TradFi8", "url": SITE + "/"},
+             "author": {"@type": "Organization", "name": "Редакція TradFi8", "url": SITE + "/pro-redaktsiiu/",
+                        "description": "Автор матеріалів — доктор філософії (PhD) з економіки"},
              "publisher": {"@type": "Organization", "name": "TradFi8",
                            "logo": {"@type": "ImageObject", "url": f"{SITE}/apple-touch-icon.png"}}},
             {"@type": "BreadcrumbList", "itemListElement": [
@@ -790,6 +806,9 @@ def build_article(a, others):
                 {"@type": "ListItem", "position": 3, "name": a["title"], "item": url}]},
         ],
     }
+    if a.get("faq"):
+        ld["@graph"].append(pages_q1.faq_ld(a["faq"]))
+    faq = pages_q1.faq_html(sys.modules[__name__], a["faq"]) if a.get("faq") else ""
     cta_href, cta_text = a.get("cta", ("/statti/", "Усі статті"))
     disc = f'<p class="disc">{DISC_INVEST}</p>' if a.get("disc") else \
         '<p class="disc">Матеріал має освітній характер і не є фінансовою порадою.</p>'
@@ -806,6 +825,8 @@ def build_article(a, others):
   <article class="body">
 {a['body'].strip()}
   </article>
+  {faq}
+  {BYLINE}
   <div class="cta"><a class="btn" href="{cta_href}">{cta_text}</a><a class="btn light" href="/video/">Відео TradFi8</a></div>
   {disc}
 </div>
@@ -1043,8 +1064,8 @@ def build_faq():
     for t, *_ in FAQ:
         if t not in tags:
             tags.append(t)
-    calc = {"Скільки податків платять із відсотків за депозитом?": ("/kalkulyatory/#deposit", "Калькулятор депозиту"),
-            "Як дізнатися справжню вартість кредиту?": ("/kalkulyatory/#credit", "Калькулятор кредиту")}
+    calc = {"Скільки податків платять із відсотків за депозитом?": ("/kalkulyatory/depozyt/", "Калькулятор депозиту"),
+            "Як дізнатися справжню вартість кредиту?": ("/kalkulyatory/kredyt/", "Калькулятор кредиту")}
     items = []
     for t, q, a, slug, title in FAQ:
         more = []
@@ -1085,8 +1106,9 @@ def build_faq():
 def build_sitemap():
     last = max([UPDATED] + [a.get("updated", UPDATED) for a in ARTICLES])
     urls = [(SITE + "/", "1.0", "daily", UPDATED), (SITE + "/statti/", "0.9", "daily", last),
-            (SITE + "/kalkulyatory/", "0.8", "monthly", UPDATED), (SITE + "/video/", "0.7", "weekly", UPDATED),
+            (SITE + "/kalkulyatory/", "0.8", "monthly", pages_q1.UPDATED), (SITE + "/video/", "0.7", "weekly", UPDATED),
             (SITE + "/zapytaty/", "0.8", "weekly", FAQ_UPDATED)]
+    urls += [(f"{SITE}/{u}", "0.8" if u.startswith("kalk") else "0.5", "monthly", pages_q1.UPDATED) for u in pages_q1.EXTRA_URLS]
     urls += [(f"{SITE}/statti/{a['slug']}/", "0.8", "weekly", a.get("updated", UPDATED)) for a in ARTICLES]
     body = "\n".join(
         f"  <url>\n    <loc>{u}</loc>\n    <lastmod>{lm}</lastmod>\n    <changefreq>{c}</changefreq>\n    <priority>{p}</priority>\n  </url>"
@@ -1101,7 +1123,7 @@ if __name__ == "__main__":
         build_article(a, related(i))
     build_index()
     build_video()
-    build_calcs()
+    pages_q1.build_all(sys.modules[__name__])  # окремі калькулятори + /kalkulyatory/ + сторінки довіри
     build_faq()
     build_sitemap()
     print(f"Готово: {len(ARTICLES)} статей, /statti/, /video/ ({len(VIDEOS)}), /kalkulyatory/, /zapytaty/ ({len(FAQ)}), sitemap.xml")

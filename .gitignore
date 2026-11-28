@@ -1,3 +1,4 @@
 # службові файли macOS
 ._*
 .DS_Store
+__pycache__/

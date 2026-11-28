@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор депозиту 2026 з податками: дохід «на руки» — TradFi8</title>
+<meta name="description" content="Калькулятор депозиту з податками 2026: ПДФО 18% і військовий збір 5% уже враховано. Порахуйте дохід «на руки», ефективну ставку й суму з капіталізацією.">
+<link rel="canonical" href="https://tradfi8.com.ua/kalkulyatory/depozyt/">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TradFi8">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:url" content="https://tradfi8.com.ua/kalkulyatory/depozyt/">
+<meta property="og:title" content="Калькулятор депозиту 2026 з податками: дохід «на руки» — TradFi8">
+<meta property="og:description" content="Калькулятор депозиту з податками 2026: ПДФО 18% і військовий збір 5% уже враховано. Порахуйте дохід «на руки», ефективну ставку й суму з капіталізацією.">
+<meta property="og:image" content="https://tradfi8.com.ua/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tradfi8.com.ua/og-image.png">
+<link rel="stylesheet" href="/assets/article.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Калькулятор депозиту", "url": "https://tradfi8.com.ua/kalkulyatory/depozyt/", "inLanguage": "uk", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "UAH"}, "publisher": {"@id": "https://tradfi8.com.ua/#org"}, "dateModified": "2026-11-28"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Чи враховує калькулятор податки?", "acceptedAnswer": {"@type": "Answer", "text": "Так. За замовчуванням стоїть 23%: 18% ПДФО і 5% військового збору, які банк утримує з відсотків за депозитом. Ставку можна змінити."}}, {"@type": "Question", "name": "Що вигідніше: з капіталізацією чи без?", "acceptedAnswer": {"@type": "Answer", "text": "За однакової ставки капіталізація дає трохи більше, бо відсотки нараховуються на відсотки. Але банки часто дають за вклад із виплатою щомісяця або з капіталізацією різні ставки, тож порівнюйте обидва варіанти в калькуляторі."}}, {"@type": "Question", "name": "Чому реальна сума в банку може відрізнятися?", "acceptedAnswer": {"@type": "Answer", "text": "Банки по-різному рахують дні (365 чи 366, фактичні дні місяця), дату нарахування й умови дострокового зняття. Калькулятор дає наближений результат для порівняння."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://tradfi8.com.ua/"}, {"@type": "ListItem", "position": 2, "name": "Калькулятори", "item": "https://tradfi8.com.ua/kalkulyatory/"}, {"@type": "ListItem", "position": 3, "name": "Калькулятор депозиту", "item": "https://tradfi8.com.ua/kalkulyatory/depozyt/"}]}]}</script>
+</head>
+<body>
+<nav class="nav"><div class="in">
+  <a class="logo" href="/">Trad<b>Fi</b>8</a>
+  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a class="hide-xs" href="/video/">Відео</a><a href="/zapytaty/">Питання</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
+</div></nav>
+<main>
+<div class="wrap">
+  <div class="crumbs"><a href="/">Головна</a> › <a href="/kalkulyatory/">Калькулятори</a> › Калькулятор депозиту</div>
+  <header class="art"><h1>Калькулятор депозиту.</h1><p class="lead">Порахуйте дохід за вкладом з урахуванням податків 23% і капіталізації: скільки відсотків нарахують, скільки утримає держава і що лишиться вам.</p></header>
+  <section class="calcbox" id="calc" aria-label="Калькулятор депозиту">
+    <div class="fields"><label class="fld"><span>Сума вкладу, ₴</span><input id="d_sum" type="number" inputmode="decimal" value="100000" step="1000" min="0"></label><label class="fld"><span>Ставка банку, % річних</span><input id="d_rate" type="number" inputmode="decimal" value="15" step="0.1" min="0"></label><label class="fld"><span>Строк, місяців</span><input id="d_months" type="number" inputmode="decimal" value="12" step="1" min="0"></label><label class="fld"><span>Податки, % (ПДФО 18 + ВЗ 5)</span><input id="d_tax" type="number" inputmode="decimal" value="23" step="0.5" min="0"></label></div>
+    <label class="chk"><input id="d_cap" type="checkbox"> Капіталізація щомісяця (відсотки додаються до вкладу)</label>
+    <div class="res res4"><div><b id="d_gross"></b>відсотки до податків</div><div><b id="d_taxsum"></b>утримають податки</div><div><b id="d_net"></b>дохід «на руки»</div><div><b id="d_total"></b>отримаєте разом</div></div>
+    <p class="note">Ефективна ставка після податків: <b id="d_eff"></b> річних.</p>
+  </section>
+  <article class="body">
+<h2>Як рахує калькулятор</h2>
+<p><strong>Без капіталізації</strong> відсотки нараховуються лише на початкову суму: <em>дохід = сума × ставка × місяці / 12</em>. Потім від доходу віднімаються податки 23%.</p>
+<p><strong>З капіталізацією</strong> відсотки щомісяця додаються до вкладу, і наступного місяця нараховуються вже на більшу суму. Банк утримує податки під час кожного нарахування, тому калькулятор нараховує складний відсоток на суму після податків: <em>дохід = сума × ((1 + ставка/12 × 0,77)<sup>місяці</sup> − 1)</em>.</p>
+
+<h2>Приклад</h2>
+<p>100 000 ₴ на 12 місяців під 15% річних:</p>
+<table>
+<tr><th>Варіант</th><th class="r">До податків</th><th class="r">«На руки»</th></tr>
+<tr><td>Без капіталізації</td><td class="r">15 000 ₴</td><td class="r">11 550 ₴</td></tr>
+<tr><td>З капіталізацією щомісяця</td><td class="r">≈15 820 ₴</td><td class="r">≈12 180 ₴</td></tr>
+</table>
+<p>Просте правило: щоб дізнатися ставку «на руки», помножте ставку банку на 0,77. Чому саме так — у статті <a href="/statti/podatok-z-depozytu/">«Податок з депозиту у 2026 році»</a>.</p>
+
+<h2>Що врахувати, крім ставки</h2>
+<ul>
+<li><strong>Гарантія вкладу.</strong> Перевірте, що банк — учасник Фонду гарантування вкладів. Див. <a href="/statti/bank-zbankrutuvav-depozyt/">«Банк збанкрутував. Що буде з депозитом?»</a></li>
+<li><strong>Дострокове зняття.</strong> Якщо забрати гроші раніше, банк може перерахувати відсотки за нижчою ставкою.</li>
+<li><strong>Інфляція.</strong> Якщо ставка «на руки» нижча за інфляцію, реальна дохідність від'ємна. Див. <a href="/statti/infliatsiia/">«Інфляція простими словами»</a>.</li>
+<li><strong>Альтернатива — ОВДП.</strong> Дохід від ОВДП не оподатковується. Порівняння — у статті <a href="/statti/depozyt-chy-ovdp/">«Депозит чи ОВДП»</a>.</li>
+</ul>
+  </article>
+  <section class="faqsec"><h2>Часті питання</h2>
+<div class="faq">
+<details class="qa"><summary>Чи враховує калькулятор податки?</summary><div class="ans"><p>Так. За замовчуванням стоїть 23%: 18% ПДФО і 5% військового збору, які банк утримує з відсотків за депозитом. Ставку можна змінити.</p></div></details>
+<details class="qa"><summary>Що вигідніше: з капіталізацією чи без?</summary><div class="ans"><p>За однакової ставки капіталізація дає трохи більше, бо відсотки нараховуються на відсотки. Але банки часто дають за вклад із виплатою щомісяця або з капіталізацією різні ставки, тож порівнюйте обидва варіанти в калькуляторі.</p></div></details>
+<details class="qa"><summary>Чому реальна сума в банку може відрізнятися?</summary><div class="ans"><p>Банки по-різному рахують дні (365 чи 366, фактичні дні місяця), дату нарахування й умови дострокового зняття. Калькулятор дає наближений результат для порівняння.</p></div></details>
+</div></section>
+  <p class="relline"><b>Читайте також:</b> <a href="/statti/podatok-z-depozytu/">Податок з депозиту у 2026 році</a> · <a href="/statti/viiskovyi-zbir-z-depozytu/">Військовий збір з депозиту</a> · <a href="/statti/depozyt-chy-ovdp/">Депозит чи ОВДП</a></p>
+  <p class="relline"><b>Інші калькулятори:</b> <a href="/kalkulyatory/kredyt/">Кредитний калькулятор</a> · <a href="/kalkulyatory/podushka/">Калькулятор фінансової подушки</a> · <a href="/#calc">Складний відсоток</a></p>
+  <p class="byline">Підготувала <a href="/pro-redaktsiiu/">Редакція TradFi8</a> · автор — доктор філософії з економіки · <a href="/redaktsiina-polityka/">як ми перевіряємо факти</a></p>
+  <p class="disc">Розрахунки приблизні й мають освітній характер. Це не фінансова порада й не пропозиція банку. Точні умови дивіться в договорі.</p>
+</div>
+</main>
+<footer><div class="in">
+Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a><br>
+<a href="/pro-redaktsiiu/">Про редакцію</a> · <a href="/redaktsiina-polityka/">Редакційна політика</a> · <a href="/kontakty/">Контакти</a>
+</div></footer>
+<script>
+(function(){
+  function v(id){var x=parseFloat((document.getElementById(id).value||'').replace(',','.'));return isFinite(x)?x:0}
+  function f(x){return Math.round(x).toLocaleString('uk-UA')+' ₴'}
+  function set(id,t){document.getElementById(id).textContent=t}
+  function dep(){
+    var P=v('d_sum'),r=v('d_rate')/100,m=Math.max(1,Math.round(v('d_months'))),tax=Math.min(v('d_tax'),99)/100,cap=document.getElementById('d_cap').checked;
+    // Податок банк утримує при кожному нарахуванні, тому з капіталізацією «працює» сума після податків.
+    var net=cap?P*(Math.pow(1+r/12*(1-tax),m)-1):P*r*m/12*(1-tax);
+    var gross=tax<1?net/(1-tax):0;
+    set('d_gross',f(gross)); set('d_taxsum',f(gross-net)); set('d_net',f(net)); set('d_total',f(P+net));
+    set('d_eff',(P>0?(net/P*12/m*100):0).toFixed(2).replace('.',',')+'%');
+  }
+  [].forEach.call(document.querySelectorAll('#calc input'),function(i){i.addEventListener('input',dep);i.addEventListener('change',dep)});
+  dep();
+})();
+</script>
+</body>
+</html>

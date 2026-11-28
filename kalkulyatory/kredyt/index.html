@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кредитний калькулятор: щомісячний платіж і переплата — TradFi8</title>
+<meta name="description" content="Кредитний калькулятор онлайн: щомісячний платіж (ануїтет), скільки заплатите разом і переплата. З урахуванням щомісячної комісії. Простими словами, без реклами банків.">
+<link rel="canonical" href="https://tradfi8.com.ua/kalkulyatory/kredyt/">
+<meta name="theme-color" content="#fbfbfd">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TradFi8">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:url" content="https://tradfi8.com.ua/kalkulyatory/kredyt/">
+<meta property="og:title" content="Кредитний калькулятор: щомісячний платіж і переплата — TradFi8">
+<meta property="og:description" content="Кредитний калькулятор онлайн: щомісячний платіж (ануїтет), скільки заплатите разом і переплата. З урахуванням щомісячної комісії. Простими словами, без реклами банків.">
+<meta property="og:image" content="https://tradfi8.com.ua/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tradfi8.com.ua/og-image.png">
+<link rel="stylesheet" href="/assets/article.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Кредитний калькулятор", "url": "https://tradfi8.com.ua/kalkulyatory/kredyt/", "inLanguage": "uk", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "UAH"}, "publisher": {"@id": "https://tradfi8.com.ua/#org"}, "dateModified": "2026-11-28"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Як порахувати щомісячний платіж за кредитом?", "acceptedAnswer": {"@type": "Answer", "text": "Для рівних платежів (ануїтету) використовують формулу: сума × i / (1 − (1 + i)^−n), де i — річна ставка, поділена на 12, а n — кількість місяців. Калькулятор робить це автоматично."}}, {"@type": "Question", "name": "Що таке реальна річна процентна ставка?", "acceptedAnswer": {"@type": "Answer", "text": "Це повна вартість кредиту у відсотках річних з урахуванням комісій, страховок та інших платежів. Вона зазвичай вища за рекламну ставку, тому порівнюйте кредити саме за нею."}}, {"@type": "Question", "name": "Як зменшити переплату?", "acceptedAnswer": {"@type": "Answer", "text": "Обирайте коротший строк, порівнюйте реальну річну ставку в кількох банках і погашайте кредит достроково, якщо договір це дозволяє без штрафів."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://tradfi8.com.ua/"}, {"@type": "ListItem", "position": 2, "name": "Калькулятори", "item": "https://tradfi8.com.ua/kalkulyatory/"}, {"@type": "ListItem", "position": 3, "name": "Кредитний калькулятор", "item": "https://tradfi8.com.ua/kalkulyatory/kredyt/"}]}]}</script>
+</head>
+<body>
+<nav class="nav"><div class="in">
+  <a class="logo" href="/">Trad<b>Fi</b>8</a>
+  <div class="links"><a href="/statti/">Статті</a><a href="/kalkulyatory/">Калькулятори</a><a class="hide-xs" href="/video/">Відео</a><a href="/zapytaty/">Питання</a><a class="hide-m" href="/#products">Курси й гайди</a></div>
+</div></nav>
+<main>
+<div class="wrap">
+  <div class="crumbs"><a href="/">Головна</a> › <a href="/kalkulyatory/">Калькулятори</a> › Кредитний калькулятор</div>
+  <header class="art"><h1>Кредитний калькулятор.</h1><p class="lead">Порахуйте щомісячний платіж, загальну суму виплат і переплату за кредитом ще до підписання договору.</p></header>
+  <section class="calcbox" id="calc" aria-label="Кредитний калькулятор">
+    <div class="fields"><label class="fld"><span>Сума кредиту, ₴</span><input id="c_sum" type="number" inputmode="decimal" value="100000" step="1000" min="0"></label><label class="fld"><span>Ставка, % річних</span><input id="c_rate" type="number" inputmode="decimal" value="30" step="0.1" min="0"></label><label class="fld"><span>Строк, місяців</span><input id="c_months" type="number" inputmode="decimal" value="24" step="1" min="0"></label><label class="fld"><span>Щомісячна комісія, % від суми</span><input id="c_fee" type="number" inputmode="decimal" value="0" step="0.1" min="0"></label></div>
+    <div class="res"><div><b id="c_pay"></b>платіж щомісяця</div><div><b id="c_total"></b>заплатите разом</div><div><b id="c_over"></b>переплата</div></div>
+  </section>
+  <article class="body">
+<h2>Як рахує калькулятор</h2>
+<p>Калькулятор рахує <strong>ануїтет</strong> — рівні щомісячні платежі, як у більшості споживчих кредитів і кредитів готівкою: <em>платіж = сума × i / (1 − (1 + i)<sup>−n</sup>)</em>, де <em>i</em> — місячна ставка (річна / 12), а <em>n</em> — кількість місяців.</p>
+<p>Якщо банк бере <strong>щомісячну комісію</strong> від початкової суми кредиту, вкажіть її окремо: вона часто «ховає» реальну вартість. Навіть 1% на місяць додає приблизно 12% річних до ставки.</p>
+
+<h2>Приклад</h2>
+<table>
+<tr><th>Кредит</th><th class="r">Платіж</th><th class="r">Переплата</th></tr>
+<tr><td>100 000 ₴, 30% річних, 24 міс.</td><td class="r">≈5 591 ₴</td><td class="r">≈34 190 ₴</td></tr>
+<tr><td>50 000 ₴, 36% річних, 12 міс.</td><td class="r">≈5 023 ₴</td><td class="r">≈10 277 ₴</td></tr>
+<tr><td>50 000 ₴, 36% річних, 24 міс.</td><td class="r">≈2 952 ₴</td><td class="r">≈20 857 ₴</td></tr>
+</table>
+<p>Подовжити строк — означає зменшити платіж, але майже подвоїти переплату. Вирішуйте, що для вас важливіше.</p>
+
+<h2>Перед тим як підписати договір</h2>
+<ul>
+<li><strong>Дивіться на реальну річну процентну ставку</strong> в паспорті кредиту: вона враховує комісії, страховки й інші платежі. Банк зобов'язаний її показати.</li>
+<li><strong>Перевірте умови дострокового погашення.</strong> Закрити кредит раніше — найпростіший спосіб зменшити переплату.</li>
+<li><strong>Платіж — не більше третини доходу.</strong> Інакше будь-яка непередбачена витрата може призвести до прострочки.</li>
+<li><strong>Облікова ставка НБУ впливає на ціну кредитів.</strong> Детальніше — у статті <a href="/statti/oblikova-stavka/">«Облікова ставка»</a>.</li>
+</ul>
+  </article>
+  <section class="faqsec"><h2>Часті питання</h2>
+<div class="faq">
+<details class="qa"><summary>Як порахувати щомісячний платіж за кредитом?</summary><div class="ans"><p>Для рівних платежів (ануїтету) використовують формулу: сума × i / (1 − (1 + i)^−n), де i — річна ставка, поділена на 12, а n — кількість місяців. Калькулятор робить це автоматично.</p></div></details>
+<details class="qa"><summary>Що таке реальна річна процентна ставка?</summary><div class="ans"><p>Це повна вартість кредиту у відсотках річних з урахуванням комісій, страховок та інших платежів. Вона зазвичай вища за рекламну ставку, тому порівнюйте кредити саме за нею.</p></div></details>
+<details class="qa"><summary>Як зменшити переплату?</summary><div class="ans"><p>Обирайте коротший строк, порівнюйте реальну річну ставку в кількох банках і погашайте кредит достроково, якщо договір це дозволяє без штрафів.</p></div></details>
+</div></section>
+  <p class="relline"><b>Читайте також:</b> <a href="/statti/oblikova-stavka/">Облікова ставка НБУ</a> · <a href="/statti/pravylo-50-30-20/">Правило 50/30/20</a> · <a href="/statti/yak-ne-potrapyty-na-shakhraiv/">Як не потрапити на гачок шахраїв</a></p>
+  <p class="relline"><b>Інші калькулятори:</b> <a href="/kalkulyatory/depozyt/">Калькулятор депозиту</a> · <a href="/kalkulyatory/podushka/">Калькулятор фінансової подушки</a> · <a href="/#calc">Складний відсоток</a></p>
+  <p class="byline">Підготувала <a href="/pro-redaktsiiu/">Редакція TradFi8</a> · автор — доктор філософії з економіки · <a href="/redaktsiina-polityka/">як ми перевіряємо факти</a></p>
+  <p class="disc">Розрахунки приблизні й мають освітній характер. Це не фінансова порада й не пропозиція банку. Точні умови дивіться в договорі.</p>
+</div>
+</main>
+<footer><div class="in">
+Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a><br>
+<a href="/pro-redaktsiiu/">Про редакцію</a> · <a href="/redaktsiina-polityka/">Редакційна політика</a> · <a href="/kontakty/">Контакти</a>
+</div></footer>
+<script>
+(function(){
+  function v(id){var x=parseFloat((document.getElementById(id).value||'').replace(',','.'));return isFinite(x)?x:0}
+  function f(x){return Math.round(x).toLocaleString('uk-UA')+' ₴'}
+  function set(id,t){document.getElementById(id).textContent=t}
+  function cred(){
+    var S=v('c_sum'),r=v('c_rate')/100/12,n=Math.max(1,Math.round(v('c_months'))),fee=v('c_fee')/100;
+    var pay=r?S*r/(1-Math.pow(1+r,-n)):S/n, feeM=S*fee;
+    set('c_pay',f(pay+feeM)); set('c_total',f((pay+feeM)*n)); set('c_over',f((pay+feeM)*n-S));
+  }
+  [].forEach.call(document.querySelectorAll('#calc input'),function(i){i.addEventListener('input',cred)});
+  cred();
+})();
+</script>
+</body>
+</html>
