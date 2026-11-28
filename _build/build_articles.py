@@ -720,7 +720,7 @@ def build_index():
     out += f"""<main>
 <div class="wrap">
   <div class="crumbs"><a href="/">Головна</a> › Статті</div>
-  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. {len(ARTICLES)} матеріалів, нові щодня.</p></header>
+  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. {len(ARTICLES)} матеріалів, нові щотижня.</p></header>
   <label class="search"><span class="sr">Пошук статей</span><input id="q" type="search" placeholder="Пошук: депозит, шахраї, інфляція…" autocomplete="off"></label>
   {chips(tags)}
   <div class="list">
