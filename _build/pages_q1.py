@@ -324,6 +324,7 @@ ABOUT = """
 <li><a href="/kalkulyatory/">Калькулятори</a> — депозит з податками, кредит, фінансова подушка, складний відсоток.</li>
 <li><a href="/zapytaty/">Запитай Богдана</a> — короткі відповіді на часті питання.</li>
 <li><a href="/video/">Відео</a> на YouTube-каналі TradFi8 і щоденні розбори в <a href="https://t.me/tradfi8" rel="noopener">Telegram</a>.</li>
+<li>LinkedIn — <a href="https://www.linkedin.com/company/tradfi8" rel="noopener">сторінка TradFi8</a>: новини платформи й короткі розбори для професіоналів.</li>
 </ul>
 
 <h2>Незалежність</h2>
@@ -384,6 +385,8 @@ CONTACTS = """
 <li><strong>Пошта:</strong> <a href="mailto:bohdan.tradfi8@gmail.com">bohdan.tradfi8@gmail.com</a></li>
 <li><strong>Telegram-канал:</strong> <a href="https://t.me/tradfi8" rel="noopener">t.me/tradfi8</a> — щоденні розбори й новини.</li>
 <li><strong>YouTube:</strong> <a href="https://youtube.com/@TradFi8" rel="noopener">@TradFi8</a> — питання в коментарях під відео.</li>
+<li><strong>LinkedIn</strong> — <a href="https://www.linkedin.com/company/tradfi8" rel="noopener">сторінка TradFi8</a>: новини платформи й короткі розбори для професіоналів.</li>
+<li><strong>Instagram, Facebook, X:</strong> <a href="https://instagram.com/tradfi8" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594823204643" rel="noopener">Facebook</a> · <a href="https://x.com/TradFi8" rel="noopener">X</a></li>
 </ul></div>
 
 <h2>З чим ми можемо допомогти</h2>
@@ -406,7 +409,9 @@ def build_trust(B):
     simple_page(B, "pro-redaktsiiu", "Про редакцію",
                 "Про редакцію TradFi8: хто готує матеріали — TradFi8",
                 "Хто стоїть за TradFi8: незалежна редакція, автор — доктор філософії з економіки. Наші принципи, незалежність і як ми готуємо матеріали.",
-                "Хто готує матеріали TradFi8 і чому їм можна довіряти.", ABOUT, ld_type="AboutPage")
+                "Хто готує матеріали TradFi8 і чому їм можна довіряти.", ABOUT, ld_type="AboutPage",
+                extra_ld={"@type": "Organization", "@id": f"{B.SITE}/#org", "name": "TradFi8", "url": B.SITE + "/",
+                          "sameAs": [u for _, u in SOCIALS]})
     simple_page(B, "redaktsiina-polityka", "Редакційна політика",
                 "Редакційна політика TradFi8: джерела, перевірка фактів, конфлікт інтересів",
                 "Як TradFi8 готує й перевіряє матеріали: першоджерела, перевірка фактів, оновлення, виправлення помилок, використання ШІ, дисклеймер і конфлікт інтересів.",
@@ -416,6 +421,8 @@ def build_trust(B):
                 "Як зв'язатися з редакцією TradFi8: Telegram, пошта, YouTube. Питання, співпраця й повідомлення про помилки.",
                 "Питання, пропозиції, співпраця чи помилка на сайті — пишіть.", CONTACTS, ld_type="ContactPage")
 
+
+SOCIALS = (('YouTube', 'https://youtube.com/@TradFi8'), ('Telegram', 'https://t.me/tradfi8'), ('Instagram', 'https://instagram.com/tradfi8'), ('Facebook', 'https://www.facebook.com/profile.php?id=61594823204643'), ('X', 'https://x.com/TradFi8'), ('LinkedIn', 'https://www.linkedin.com/company/tradfi8'))
 
 EXTRA_URLS = ["kalkulyatory/depozyt/", "kalkulyatory/kredyt/", "kalkulyatory/podushka/",
               "pro-redaktsiiu/", "redaktsiina-polityka/", "kontakty/"]

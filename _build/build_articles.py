@@ -708,7 +708,8 @@ NAV = """<nav class="nav"><div class="in">
 
 FOOTER = """<footer><div class="in">
 Матеріали TradFi8 мають освітній характер і не є фінансовою чи інвестиційною порадою.<br>
-© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a> · <a href="https://youtube.com/@TradFi8">YouTube</a> · <a href="https://t.me/tradfi8">Telegram</a><br>
+© 2026 TradFi8 · <a href="/">Головна</a> · <a href="/statti/">Статті</a> · <a href="/kalkulyatory/">Калькулятори</a> · <a href="/video/">Відео</a> · <a href="/zapytaty/">Запитай Богдана</a><br>
+Ми в соцмережах: <a href="https://youtube.com/@TradFi8" rel="noopener">YouTube</a> · <a href="https://t.me/tradfi8" rel="noopener">Telegram</a> · <a href="https://instagram.com/tradfi8" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61594823204643" rel="noopener">Facebook</a> · <a href="https://x.com/TradFi8" rel="noopener">X</a> · <a href="https://www.linkedin.com/company/tradfi8" rel="noopener">LinkedIn</a><br>
 <a href="/pro-redaktsiiu/">Про редакцію</a> · <a href="/redaktsiina-polityka/">Редакційна політика</a> · <a href="/kontakty/">Контакти</a>
 </div></footer>"""
 
@@ -865,7 +866,7 @@ def build_index():
     out += f"""<main>
 <div class="wrap">
   <div class="crumbs"><a href="/">Головна</a> › Статті</div>
-  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. {len(ARTICLES)} матеріалів, нові щодня.</p></header>
+  <header class="art"><h1>Статті.</h1><p class="lead">Гроші простими словами — українською. {len(ARTICLES)} матеріалів, нові щотижня.</p></header>
   <label class="search"><span class="sr">Пошук статей</span><input id="q" type="search" placeholder="Пошук: депозит, шахраї, інфляція…" autocomplete="off"></label>
   {chips(tags)}
   <div class="list">
